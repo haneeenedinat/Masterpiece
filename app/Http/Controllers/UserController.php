@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 use App\Models\User;
 
 
@@ -28,7 +29,8 @@ class UserController extends Controller
     public function create()
     {
         //
-        return view("admin.userCreate");
+        $users=User::all();
+        return view("admin.userCreate",compact('users'));
     }
 
     /**
@@ -40,9 +42,17 @@ class UserController extends Controller
     public function store(Request $request)
     {
         //
+        $email = DB::table('users')->where('email' ,"=", $request->email)->first();
+      
+        if(!empty($email)){
+            return redirect()->back()->with('message','This Email is Already Exist');
+        }
+        else{
         User::create($request->all());
         $users=User::all();
         return view('admin.usertable',compact('users'));
+    }
+
     }
 
     /**
@@ -78,9 +88,16 @@ class UserController extends Controller
     public function update(Request $request,User $user)
     {
         //
+        $email = DB::table('users')->where('email' ,"=", $request->email)->first();
+      
+        if(!empty($email)){
+            return redirect()->back()->with('message','This Email is Already Exist');
+        }
+        else{
         $user->update($request->all());
         $users=User::all();
         return view("admin.usertable",compact('users'));
+        }
 
     }
 

@@ -29,6 +29,9 @@
                                                 <label for="exampleFormControlInput1" class="form-label">name</label>
                                                 <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name">
                                             </div>
+                                            @if(!empty(Session::get('message')))
+                                            <div class="alert alert-danger"> {{ Session::get('message') }}</div>
+                                              @endif
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">email</label>
                                                 <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required>
@@ -38,6 +41,17 @@
                                                 <label for="exampleFormControlTextarea1" class="form-label">password</label>
                                                 <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
                                             </div>
+
+                                            <div class="mb-3">     
+                                            <select class="form-select" aria-label="Default select example" name="role">   
+                                                       <option selected> Role</option>
+                                                        <option value="admin" >Admin</option>
+                                                        <option value="user">User</option>
+                                          </select>
+                                            </div>
+                                          
+                                                  
+
                                             <input class="mb-5" type="submit" value="submit">
                                         </form>
                                         
