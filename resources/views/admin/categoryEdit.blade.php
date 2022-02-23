@@ -27,7 +27,7 @@
                                         @csrf
                                         @method('PUT')
                                         <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="text" placeholder="Enter Category name" name="categorie_name" value="{{$category->categorie_name}}"   />
+                                                <input class="form-control" id="inputEmail" type="text" placeholder="Enter Category name" name="categorie_name" value="{{$category->categorie_name}}"  required />
                                                 <label for="inputEmail">categorie name</label>
                                             </div>
 

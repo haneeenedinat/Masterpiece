@@ -29,14 +29,14 @@
                                             @method('PUT')
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">name</label>
-                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name"  value="{{$user->name}}">
+                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name"  value="{{$user->name}}" required>
                                             </div>
                                             @if(!empty(Session::get('message')))
                                             <div class="alert alert-danger"> {{ Session::get('message') }}</div>
                                               @endif
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">email</label>
-                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required value="{{$user->email}}">
+                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required value="{{$user->email}}" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="exampleFormControlTextarea1" class="form-label">password</label>
@@ -45,7 +45,7 @@
 
                                             <div class="mb-3">
                                                 
-                                                <select class="form-select" aria-label="Default select example" name="role">   
+                                                <select class="form-select" aria-label="Default select example" name="role" required>   
                                                            <option selected> Role</option>
                                                             <option value="admin" >Admin</option>
                                                             <option value="user" selected>User</option>

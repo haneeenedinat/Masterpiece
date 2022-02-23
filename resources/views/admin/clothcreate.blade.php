@@ -52,7 +52,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                        
-                                                         <select class="form-select" aria-label="Default select example" name="categorie_id">
+                                                         <select class="form-select" aria-label="Default select example" name="categorie_id" required>
                                                          
                                                        <option selected>select category name</option>
                                                        @foreach($Categories as $Category)

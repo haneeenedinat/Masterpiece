@@ -27,7 +27,7 @@
                                             @csrf
                                             <div class="mb-3">
                                                 <label for="exampleFormControlInput1" class="form-label">name</label>
-                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name">
+                                                <input type="text" name="name" class="form-control" id="exampleFormControlInput1" placeholder="Enter name" required>
                                             </div>
                                             @if(!empty(Session::get('message')))
                                             <div class="alert alert-danger"> {{ Session::get('message') }}</div>
@@ -43,7 +43,7 @@
                                             </div>
 
                                             <div class="mb-3">     
-                                            <select class="form-select" aria-label="Default select example" name="role">   
+                                            <select class="form-select" aria-label="Default select example" name="role" required>   
                                                        <option selected> Role</option>
                                                         <option value="admin" >Admin</option>
                                                         <option value="user">User</option>
