@@ -44,7 +44,7 @@
                                                 <label for="inputEmail">description</label>
                                             </div>
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="text" name="user_id" value='1' />
+                                                <input class="form-control" id="inputEmail" type="text" name="user_id" value='1' disabled/>
                                                 <label for="inputEmail">user name</label>
                                             </div>
                                             <div class="row mb-3">

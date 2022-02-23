@@ -30,9 +30,6 @@ class AdminController extends Controller
         ])->Join('users','cloths.user_id', '=', 'users.id')
         ->Join('categories','categories.id', '=','cloths.categorie_id')
         ->get();
-   
-    
-
        return view('admin.tables',compact('cloths'));
     }
 

@@ -47,9 +47,10 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="#">Rooms</a>
-                                    <a class="nav-link" href="#">Users</a>
-                                    <a class="nav-link" href="#">Reservations</a>
+                                    <a class="nav-link" href="{{route('admin.index')}}">Clothes</a>
+                                    <a class="nav-link" href="{{route('category.index')}}">Category</a>
+                                    <a class="nav-link" href="{{route('user.index')}}">Users</a>
+                                   
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -61,8 +62,9 @@
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                 
                                         <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="#">Create Room</a>
-                                            <a class="nav-link" href="#">Create User</a>
+                                            <a class="nav-link" href="{{route('cloth.create')}}">Create Cloth</a>
+                                            <a class="nav-link" href="{{route('category.create')}}">Create category</a>
+                                            <a class="nav-link" href="{{route('user.create')}}">Create User</a>
                                         </nav>
                                 </nav>
                             </div>

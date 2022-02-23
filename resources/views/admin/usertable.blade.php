@@ -60,6 +60,8 @@
                    
                                             <td>{{$user->password}}</td>
                                             <td>{{$user->role}}</td>
+
+                                            @if($user->role !='admin')
                                           
                                             <td><button class="edit" style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('user.edit',$user->id)}}">edit</a></button></td>
                                           
@@ -71,6 +73,7 @@
                                          <button  style="background-color:red !important;color:white;border:none;padding:0.5rem;border-radius:3px" type="submit" class="delete">delete</button>
                                        </form>
                                     </td>
+                                    @endif
                                         </tr>
                                         @endforeach
                                     </tbody>

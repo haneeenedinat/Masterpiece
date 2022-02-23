@@ -92,6 +92,7 @@ class CategoryController extends Controller
     {
         //
         $category->deleteOrFail();
-        return redirect()->back();
+        $Categories=Category::all();
+        return view('admin.categorytable',compact('Categories'));
     }
 }

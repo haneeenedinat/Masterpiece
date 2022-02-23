@@ -20,7 +20,7 @@ class CreateClothsTable extends Migration
             $table->string('cloth_description');
             $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->unsignedBigInteger('user_id');  
+            $table->unsignedBigInteger('user_id')->default('1');  
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

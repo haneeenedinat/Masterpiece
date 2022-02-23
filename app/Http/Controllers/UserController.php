@@ -94,7 +94,7 @@ class UserController extends Controller
     {
         //
         $user->deleteOrFail();
-       
-        return redirect()->back();
+        $users=User::all();
+        return view("admin.usertable",compact('users'));
     }
 }
