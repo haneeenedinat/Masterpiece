@@ -1,0 +1,52 @@
+
+.ContactUs .ContactUsh2{
+    text-align: center;
+    margin: 2em 0;
+}
+
+.ContactUsImgForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.ContactUsImgForm form{
+    display: flex;
+    flex-direction: column;
+}
+
+.ContactUsImgForm form input, .ContactUsImgForm form textarea {
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    margin-bottom: 5px;
+    width: 35vw;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.ContactUsImgForm form button{
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color:white;
+}
+
+@media (max-width:998px) {
+    .ContactUsImgForm img{
+        width: 50vw;
+    }
+}
+
+@media (max-width:600px) {
+    .ContactUsImgForm {
+        display: flex;
+       flex-direction: column;
+       margin-bottom: 2em;
+    }
+
+    .ContactUsImgForm form input, .ContactUsImgForm form textarea {
+        width: 80vw;
+
+    }
+}

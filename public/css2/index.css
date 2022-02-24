@@ -1,0 +1,134 @@
+/* Background */
+.BackgroundImg{
+    background-image: url(../assets/img/img10new.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    border-bottom: 1px solid #0456d01f;
+    margin: 2em 0;
+}
+
+@media (max-width:768px) {
+    .BackgroundImg{
+        min-height: 30vh;  
+    } 
+}
+
+@media (max-width:425px) {
+    .BackgroundImg{
+        min-height: 20vh;      
+    } 
+}
+
+/* Background */
+ 
+
+/* We Provide */
+.WeProvide {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+  
+  .WeProvide .WeProvideH2 {
+    margin: 1em auto;
+  }
+  
+  .WeProvidep {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .WeProvidep p {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .WeProvidep {
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .WeProvidep p {
+      width: 50%;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 551px) {
+    .WeProvidep {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .WeProvidep img {
+      width: 40vw;
+    }
+  
+    .WeProvidep p {
+      width: 90%;
+      text-align: center;
+    }
+  }
+  
+/* We Provide  */
+
+/* our Featured */
+.OurFeatured .Featuredh2 h2 {
+    text-align: center;
+    margin: 1.5em 0;
+  }
+  
+  .OurFeatured {
+    margin: 3em 0;
+  }
+  
+  .Featured {
+    display: flex;
+    justify-content: center;
+  
+  }
+  
+  .FeaturedBeneficiaries {
+    border: 1px solid gray;
+    box-shadow: 1px 1px 22px rgba(85, 84, 84, 0.11);
+    padding: 2em;
+    margin-right: 1em;
+    border-radius: 4px;
+    width:35%;
+  
+  }
+  
+  .FeaturedVolunteers {
+    border: 1px solid gray;
+    box-shadow: 1px 1px 22px rgba(85, 84, 84, 0.11);
+    padding: 2em;
+    width: 35%;
+    border-radius: 4px;
+    
+  
+  }
+  
+  
+  @media (max-width:881px) {
+  .FeaturedVolunteers,.FeaturedBeneficiaries  {
+      width:45%
+  }
+  }
+  
+  @media (max-width:468px) {
+      .Featured {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .FeaturedVolunteers,.FeaturedBeneficiaries {
+          margin: 1em 0;
+          width:90%;
+      }
+  }
+  
+/* our Featured */

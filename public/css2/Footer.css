@@ -1,0 +1,76 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    /* margin-top: 4em; */
+    font-weight: 600;
+    border-top: 2px solid black;
+    background-color: black;
+    color:white;
+  }
+
+  .Footer  a{
+    text-decoration: none;
+    color:white;
+}
+  
+  .Footer .FooterInformation{
+  display: flex;
+  justify-content: space-around;
+  margin: 3em 0;
+  line-height: 2;
+  }
+  
+  .Footer .FooterSocialMedia ul li {
+     display: grid;
+     grid-template-columns: repeat(4,1fr);  
+  }
+  
+  .twitter{
+  grid-column:1/span 3;
+  }
+  .instagram{
+    grid-column: 1/span 3;
+    
+  }
+  
+  
+  .Footer .FooterSocialMedia i{
+    font-size: 1.2em;
+    margin: 0.4em;
+  }
+  
+  .Footer .FooterSocialMedia ul li a{
+    color:white;
+  }
+  
+  .Footer ul{
+    list-style-type: none;
+  }
+  
+  .Footer .FooterCopyright{
+    display: flex;
+    justify-content: center;
+    border-top:1px solid #b6b9bd;
+    padding: 2em;
+  }
+  
+  @media (max-width:600px) {
+    .Footer .FooterInformation{
+      display: flex;
+      flex-direction: column;
+      margin: 2em 0em;
+      }
+  
+      .Footer .FooterSocialMedia ul li , .FooterpageLink ul li ,.FooterContactUs ul li ,.FooterSocialMedia h3{
+       display: flex; 
+       margin-left: 0.1em;
+     }
+
+     .Footer .FooterSocialMedia ul li a{
+      margin-right: 1em;
+    }
+  
+    .Footer div{
+      margin-top: 1em;
+    }
+  }

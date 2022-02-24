@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito&family=Open+Sans&family=Roboto&display=swap');
+nav {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #0456d01f;
+    padding: 15px 0 !important;
+}
+nav a.navbar-brand {
+    color: black !important;
+    font-weight: 700;
+    font-size: 26px;
+ font-family:'Dancing Script', cursive;
+
+}
+nav .nav-item a {
+    color: black !important;
+    font-weight: 500;
+    font-size: 16px;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    text-decoration: none;
+  
+}
+
+nav .nav-item a:hover {
+    color: #353535 !important;
+    transition: all .3s ease;
+}
+
+.nav-item {
+    margin-top: 0.5em;
+}
+
+
