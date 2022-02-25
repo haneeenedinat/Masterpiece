@@ -3,7 +3,15 @@ nav {
     background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #0456d01f;
     padding: 15px 0 !important;
+    box-shadow: 1px 1px 10px #333333;
+   
 }
+.navbar{
+    position: sticky !important;
+    top: 0 !important;
+    background-color: white !important;
+} 
+
 nav a.navbar-brand {
     color: black !important;
     font-weight: 700;

@@ -189,9 +189,9 @@
 <div class="FooterpageLink">
   <ul>
   <li><h3>Page links</h3></li>
-  <li><a href='#'>Home</a></li>
-  <li><a href='#'>Donors</a></li>
-  <li>Contact us</li>
+  <li><a href='/'>Home</a></li>
+  <li><a href='/Donate'>Donors</a></li>
+  <li><a href='/contact-us'>ContactUs</a></li>
   </ul>
 </div>
 

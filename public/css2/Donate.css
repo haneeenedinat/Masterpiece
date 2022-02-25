@@ -1,0 +1,95 @@
+.DonorsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 1em auto;
+    padding: 1em;
+    border: 1px white solid;
+    border-radius: 1em;
+}
+
+.RegisterContainer h3{
+    margin: 1em auto;
+}
+
+.RegisterContainer p{
+    color:red ;
+    margin: 0 auto ;
+    font-weight: 600;
+}
+
+.RegisterContainer form a{
+    text-decoration: none;
+    color:black;
+
+}
+
+.RegisterContainer form{
+    display: flex;
+    flex-direction: column;  
+}
+
+.RegisterContainer form input,.RegisterContainer select{
+   line-height: 2;
+   margin: 1.2em auto;
+   padding: 0.5em;
+   border:none;
+   border-radius: 1em;
+   width: 70%;
+}
+
+.RegisterContainer label{
+    margin:0em 8em;
+}
+
+.DonorsContainer form .btn-primary{
+    padding: 1em ;
+    margin: 1em auto ;
+    font-size: 1em;
+    border: 1px black solid;
+    border-radius: 1em;
+    color:white;
+    background:black ;
+}
+
+.DonorsContainer p{
+    color:red ;
+    margin: 1em auto ;
+    font-weight: 600;
+}
+
+.DonorsContainer form label{
+    margin: 0.7em 0em;
+}
+
+.DonorsContainer form a{
+    margin: 0 auto;
+    font-weight: 600;
+}
+
+
+
+@media (max-width:768px) {
+    .DonorsContainer {
+        width: 70%;
+    }  
+}
+
+@media (max-width:600px) {
+    .DonorsContainer {
+        width: 88%;
+    }  
+}
+
+@media (max-width:426px) {
+
+      
+    .DonorsContainer form input{
+        width: 99%;
+         
+     }
+}
+
+
+
+

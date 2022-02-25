@@ -4,7 +4,7 @@
 @extends('layouts.footer')
 @extends('layouts.header')
 @section('content')
- <div  className="DonorsContainer">
+<div  class="DonorsContainer">
       <h3>Donors Form</h3>
 
       <form >
@@ -17,14 +17,12 @@
             required/>
         </div>
         <!-- <p>{MessageProductName}</p> -->
-   
         <div class="form-group">
           <label for="add_product">Product description</label>
           <input class="form-control" type="text" name="product_description" required />
         </div>
          <!-- <p>{MessageProductDescription}</p> -->
-
-        <div class="form-group">
+         <div class="form-group">
           <label for="add_product">Product Image</label>
           <input class="form-control" type="file" name="product_img" required />
         </div>
@@ -38,7 +36,6 @@
           </select>
         </div>
         <!-- <p>{MessageSelectCategory}</p> -->
-
         <div class="form-group">
           <input
             class="btn btn-primary"
@@ -47,8 +44,8 @@
             value="Donors"
           />
         </div>
-      </form>
-    </div>
+        </form>
+        </div>
 
     
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
