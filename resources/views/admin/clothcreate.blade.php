@@ -26,18 +26,21 @@
                                         <form method="post" action="{{route('cloth.store')}}">
                                         @csrf
                                             <div class="row mb-3">
-                                                <div class="col-md-6">
+                                                <!-- <div class="col-md-6"> -->
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter cloth name" name="cloth_name" required />
-                                                        <label for="inputFirstName">name</label>
+                                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter cloth name" name="cloth_name" required style="margin:0.5em 0;padding:1em"/>
+                                                        <label for="inputFirstName"  style="margin:0 0.7em 0 1.5em ">name</label>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
+                                                <!-- </div> -->
+                                                <!-- <div class="col-md-6"> -->
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="cloth_img" required/>
-                                                        <label for="inputPasswordConfirm">image</label>
+                                                        <!-- <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" required/> -->
+
+
+                                                        <label for="inputPasswordConfirm" style="margin-left:1em">image</label>
                                                     </div>
-                                                </div>
+                                                <!-- </div> -->
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputEmail" type="text" placeholder="Enter description" name="cloth_description" required />
@@ -49,7 +52,7 @@
                                             </div>
                                             <div class="row mb-3">
                                            
-                                                <div class="col-md-6">
+                                                <!-- <div class="col-md-6"> -->
                                                     <div class="form-floating mb-3 mb-md-0">
                                                        
                                                          <select class="form-select" aria-label="Default select example" name="categorie_id" required>
@@ -61,7 +64,7 @@
                                                         @endforeach
                                                           </select>
                                                     </div>
-                                                </div>
+                                                <!-- </div> -->
                                              
                                               
                                             </div>

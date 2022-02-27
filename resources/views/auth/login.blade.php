@@ -65,6 +65,9 @@
             <a class="nav-a" href="/">Donate</a>
             </li>
             <li class="nav-item">
+            <a class="nav-a" href="/Clothes">Clothes</a>
+            </li>
+            <li class="nav-item">
             <a class="nav-a" href="/contact-us">ContactUs</a>
             </li>
 
@@ -192,6 +195,8 @@
   <li><a href='/'>Home</a></li>
   <li><a href='/Donate'>Donors</a></li>
   <li><a href='/contact-us'>ContactUs</a></li>
+  <li ><a href='/Clothes'>Clothes</a></li>
+
   </ul>
 </div>
 

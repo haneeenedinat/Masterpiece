@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\Cloth;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+
 
 
 class ClothController extends Controller
@@ -41,8 +43,33 @@ class ClothController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+
+        // $img=$request->cloth_img;
+        // $extenstion = $img->getClientOriginalName();
+        // $extension = $file->extension();
+        // $img->move('../public/assets/img/', $extenstion);
+
+        // $path = $request->file('cloth_img')->store('public/assets/img/');
+        // $path = Storage::putFileAs(
+        //     'assets/img/', $request->file('cloth_img')
+        // );
+
+        // $cloth = new Cloth;
+        // $cloth->cloth_img = $request->cloth_img;
+        // $image= uniqid() . $request->file('cloth_img')->getClientOriginalName();
+        //         $path = $request->file('cloth_img')->storeAs('uploads', $image , '../public/assets/img/');
+        //         $cloth->cloth_img = '/storage/' . $path;
+        //         $cloth->cloth_name =$request->cloth_name;
+        //         $cloth->categorie_id =$request->categorie_id;
+        //         $cloth->cloth_description =$request->cloth_description;
+
+        //         $cloth->save();
+
         Cloth::create($request->all());
+
+   
+
         $cloths= DB::table('cloths')->select([
             'cloths.id',
             'users.name',
@@ -67,7 +94,7 @@ class ClothController extends Controller
      */
     public function show(Cloth $cloth)
     {
-        //
+       
     }
 
     /**
@@ -139,4 +166,22 @@ class ClothController extends Controller
 
        return view('admin.tables',compact('cloths'));
     }
+
+    public function uishowclothes(Cloth $cloth){
+        $cloths= DB::table('cloths')->select([
+            'cloths.id',
+            'users.name',
+            'cloths.cloth_name',
+            'cloths.cloth_img',
+            'cloths.categorie_id',
+            'cloths.cloth_description',
+            'categories.categorie_name',
+            'users.name',
+        ])->Join('users','cloths.user_id', '=', 'users.id')
+        ->Join('categories','categories.id', '=','cloths.categorie_id')
+        ->get();
+    return view('ui.clothes',compact('cloths'));
+    }
+
+    
 }

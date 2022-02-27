@@ -1,0 +1,153 @@
+.ProductContainer{
+    margin: 2em 0;
+  }
+  .ProductContainer .titleProducts {
+    text-align: center;
+  }
+  
+  .ProductContainer .titleProducts {
+    text-align: center;
+    margin-bottom: 1.2em;
+    font-weight: 600;
+  }
+  
+  .ProductContainer .main-containerProduct {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: stretch;
+    align-content: center;
+    grid-gap: 2em;
+  }
+  
+  
+  
+   @media   (max-width:900px)  {
+   .ProductContainer .main-containerProduct{
+      grid-template-columns: auto auto;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+   .ProductContainer .main-containerProduct{
+      grid-template-columns: auto;
+    }
+  }  
+    
+.image-containerCard img {
+    width: 9em;
+    height: 9em;
+    object-fit: cover;
+    transition: 0.5s ease;
+  }
+  
+  .image-containerCard {
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 0.625em;
+    position: relative;
+    display: flex;
+  }
+  
+  .image-containerCard img {
+    height: 13em;
+    object-fit: cover;
+    mix-blend-mode: initial;
+    border-radius: 8px;
+    margin: auto;
+  }
+  div .card-title {
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  
+  
+  .Card {
+    width: 17em;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: space-between;
+    border: 1px solid #cbcbcb;
+    border-radius: 8px;
+    box-shadow: 0px 0px 3px 2px #ddd;
+    overflow: hidden;
+  }
+  .card-brief-description {
+    text-align: center;
+    margin-bottom: 0.1em;
+  }
+  .information-containerCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+  }
+  
+  
+  
+  .PriceCard{
+    border-radius: 4px;
+    background-color: var(--darkBlue);
+    padding: 0.3125em;
+    font-size: 0.8em;
+    margin: 0.5em;
+    color: white;
+  }
+  
+  .btn-icon {
+    width: 1.5em;
+  }
+  
+  .btn-icon::after {
+    content: " ";
+    border-right: 1px solid #888585;
+    position: relative;
+    right: -0.3125em;
+  }
+  
+  
+  
+  .add-to-cart-btn:hover {
+    cursor: pointer;
+    box-shadow: 1px 0px 0px 0px #aca9a9;
+    background-color: #efb436d0;
+  }
+  
+  .add-to-cart-btn {
+    display: flex;
+    gap: 0.4375em;
+    margin-top: 0.5em;
+    background-color: #f78f1e;
+    padding: 0.3125em;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px 1px #aca9a9;
+    border: 1px solid #7f8a93;
+    align-content: space-around;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease;
+  }
+  
+  .image-containerCard img:hover {
+    transform: scale(1.1);
+  }
+  
+  .information-containerCard {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+    background: #007991;
+    background: -webkit-linear-gradient(to bottom, #78ffd6, #007991);
+    background: linear-gradient(to bottom, #a7c6bc00, #9ebdc4);
+    background: -webkit-linear-gradient(to bottom, #4ca1af, #2c3e50);
+  }
+  
+  
+  

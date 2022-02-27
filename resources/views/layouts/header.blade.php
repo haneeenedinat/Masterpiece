@@ -10,11 +10,7 @@
     <link rel="stylesheet" href="css2\index.css" >
     <link rel="stylesheet" href="css2\contactus.css" >
     <link rel="stylesheet" href="css2\Donate.css" >
-
-    
-
-   
-
+    <link rel="stylesheet" href="css2\clothes.css" >
 <!-- cdnj -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -39,6 +35,9 @@
             </li>
             <li class="nav-item">
             <a class="nav-a" href="/Donate">Donate</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-a" href="/Clothes">Clothes</a>
             </li>
             <li class="nav-item">
             <a class="nav-a" href="/contact-us">ContactUs</a>

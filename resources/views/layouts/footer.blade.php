@@ -9,7 +9,9 @@
   <li><a href='/'>Home</a></li>
   <li><a href='/Donate'>Donors</a></li>
   <li ><a href='/contact-us'>ContactUs</a></li>
- 
+  <li ><a href='/Clothes'>Clothes</a></li>
+
+  
   </ul>
 </div>
 
