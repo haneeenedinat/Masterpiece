@@ -27,9 +27,15 @@
           <input class="form-control" type="file" name="cloth_img"  required />
         </div>
         <div class="form-group">
+          <label for="add_product">Cloth Size</label>
+          <input class="form-control" type="text" placeholder="S,L,M,XL Or 36,38,40" name="size" id ="size"  required />
+          <p class="Msg2"></p>
+
+        </div>
+        <div class="form-group">
           <label for="add_product">Category Title</label>
         
-          <select class="form-select" aria-label="Default select example" name="categorie_id" id ="categorie_id" required>                                        
+          <select class="form-select" aria-label="Default select example" name="categorie_id" id ="categorie_id"  required>                                        
               <option selected>select category name</option>
              @foreach($Categories as $Category)                                     
             <option value="{{$Category->id}}">{{$Category->categorie_name}}</option>

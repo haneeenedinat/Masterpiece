@@ -15,6 +15,8 @@ class Cloth extends Model
         'cloth_img',
         'cloth_description', 
         'categorie_id'   ,
+        'size',
+        'available',
         'user_id' 
     ];
 

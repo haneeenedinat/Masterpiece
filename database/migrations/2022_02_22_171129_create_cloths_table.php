@@ -18,9 +18,11 @@ class CreateClothsTable extends Migration
             $table->string('cloth_name');
             $table->string('cloth_img');
             $table->string('cloth_description');
+            $table->string('size');
+            $table->boolean('available')->default(1);
             $table->unsignedBigInteger('categorie_id');
             $table->foreign('categorie_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->unsignedBigInteger('user_id')->default('1');  
+            $table->unsignedBigInteger('user_id')->default('1'); 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

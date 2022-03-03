@@ -51,6 +51,7 @@ Route::get('/showClothes', [ClothController::class, 'uishowclothes'])->name('sho
 Route::post('/storeDonate',[ClothController::class,'uistoreDonate'])->name('storeDonate.uistoreDonate');
 
 Route::get('/Donate', [ClothController::class, 'uishowDonate'])->name('Donate.uishowDonate');
+Route::put('/addClothe/{cloth}',[ClothController::class,'AddClotheToCart'])->name('addClothe.AddClotheToCart');
 
 
  

@@ -6,6 +6,7 @@
 <h2 class="titleProducts"> Clothes</h2>
 <div class="main-containerProduct">
     @foreach($cloths as $cloth)
+    @if( $cloth->available == '1')
       <div class="Card">
         <div class="image-containerCard">
           <img src="{{$cloth->cloth_img}}" alt="{{$cloth->cloth_img}}" />
@@ -14,11 +15,18 @@
          <div class="card-title">{{$cloth->cloth_name}}</div>
           <div class="card-brief-description">
             <p>{{$cloth->cloth_description}}</p>
+            <p>Size : {{$cloth->size}}</p>
+            <form method='post' action="{{route('addClothe.AddClotheToCart',$cloth->id)}}">
+            @csrf
+            @method('PUT')
+            <button type="submit" class='icon'> <i class="fa-solid fa-thumbs-up"></i></button>
+            </form>
          
           </div>
-          <div class="PriceCard">{{$cloth->categorie_name}}</div>
+          <div class="Categorie">Categorie Name : {{$cloth->categorie_name}}</div>
         </div>
       </div>
+      @endif
       @endforeach
       </div>
       </div>

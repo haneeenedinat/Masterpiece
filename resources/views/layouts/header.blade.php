@@ -5,12 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css2\header.css" >
-    <link rel="stylesheet" href="css2\Footer.css" >
-    <link rel="stylesheet" href="css2\index.css" >
-    <link rel="stylesheet" href="css2\contactus.css" >
-    <link rel="stylesheet" href="css2\Donate.css" >
-    <link rel="stylesheet" href="css2\clothes.css" >
+    <link rel="stylesheet" href="{{asset('css2\header.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\Footer.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\index.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\contactus.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\Donate.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\clothes.css')}}" >
 <!-- cdnj -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -59,10 +59,12 @@
                                 </li>
                             @endif
                         @else
+
                             <li class="nav-item">
-                              
+                            <a  href="/userCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+
                                 @if(Auth::user()->role=="admin")
-                                <a  href="admin/admin"
+                                <a  href="admin"
                                      >
                                         {{ __('dashboard') }}
                                     </a>

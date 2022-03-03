@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css2\header.css" >
-    <link rel="stylesheet" href="css2\Footer.css" >
-    <link rel="stylesheet" href="css2\index.css" >
-    <link rel="stylesheet" href="css2\contactus.css" >
+    <link rel="stylesheet" href="{{asset('css2\header.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\Footer.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\index.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\contactus.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\Donate.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\clothes.css')}}" >
 
    
 
@@ -58,14 +60,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           
+          
             <li class="nav-item">
             <a class="nav-a active" aria-current="page" href="/" >Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="/">Donate</a>
+            <a class="nav-a" href="{{route('Donate.uishowDonate')}}">Donate</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="/Clothes">Clothes</a>
+            <a class="nav-a" href="{{route('showClothes.uishowclothes')}}">Clothes</a>
             </li>
             <li class="nav-item">
             <a class="nav-a" href="/contact-us">ContactUs</a>
@@ -90,7 +93,7 @@
                             <li class="nav-item">
                               
                                 @if(Auth::user()->role=="admin")
-                                <a  href="admin/admin"
+                                <a  href="admin"
                                      >
                                         {{ __('dashboard') }}
                                     </a>
@@ -193,9 +196,10 @@
   <ul>
   <li><h3>Page links</h3></li>
   <li><a href='/'>Home</a></li>
-  <li><a href='/Donate'>Donors</a></li>
+  <li><a href="{{route('Donate.uishowDonate')}}">Donors</a></li>
   <li><a href='/contact-us'>ContactUs</a></li>
-  <li ><a href='/Clothes'>Clothes</a></li>
+  <li ><a href="{{route('showClothes.uishowclothes')}}">Clothes</a></li>
+
 
   </ul>
 </div>

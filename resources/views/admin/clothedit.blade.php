@@ -45,6 +45,10 @@
                                                 <input class="form-control" id="inputEmail" type="text" placeholder="Enter description" name="cloth_description" value="{{$cloth->cloth_description}}" required />
                                                 <label for="inputEmail">description</label>
                                             </div>
+                                            <div class="form-floating mb-3">
+                                            <input class="form-control" id="inputEmail" type="text" name="size" value="{{$cloth->size}}" placeholder="Enter size such as :S,L,M,XL or ,36,38,40" required/>
+                                                <label for="inputEmail"> Size Such As :S,L,M,XL Or ,36,38,40</label>
+                                            </div>
 
                                             <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">

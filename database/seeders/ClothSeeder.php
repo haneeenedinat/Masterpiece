@@ -21,6 +21,8 @@ class ClothSeeder extends Seeder
         'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'3',
+        'size'=>'L',
+        'available'=>'1',
         'user_id'=>'1',
       ],
       [
@@ -28,6 +30,8 @@ class ClothSeeder extends Seeder
         'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'3',
+        'size'=>'M',
+        'available'=>'1',
         'user_id'=>'1',
       ],
       [
@@ -35,6 +39,8 @@ class ClothSeeder extends Seeder
         'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'1',
+        'size'=>'XL',
+        'available'=>'1',
         'user_id'=>'1',
       ],
       [
@@ -42,6 +48,8 @@ class ClothSeeder extends Seeder
         'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'2',
+        'size'=>'S',
+        'available'=>'1',
         'user_id'=>'1',
       ],
       ]);

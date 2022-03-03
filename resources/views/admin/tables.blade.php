@@ -38,6 +38,7 @@
                                             <th>Cloth img</th>
                                             <th>Cloth description</th>
                                             <th>Categorie name</th>
+                                            <th>Size</th>
                                            <th>Edit</th> 
                                            <th>Delete</th>
                                         </tr>
@@ -49,6 +50,7 @@
                                             <th>Cloth img</th>
                                             <th>Cloth description</th>
                                             <th>Categorie name</th>
+                                            <th>Size</th>
                                             <td>Edit</td>
                                             <td>Delete</td>
                                          
@@ -66,6 +68,7 @@
 
                                             <td width="200vw">{{$cloth->cloth_description}}</td>
                                             <td width="200vw">{{$cloth->categorie_name}}</td>
+                                            <td width="200vw">{{$cloth->size}}</td>
                                             <td><button class="edit"  style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('cloth.edit',$cloth->id)}}">edit</a></button></td>
                                           
                                             <td>
