@@ -45,9 +45,13 @@ Route::resource('/cloth',ClothController::class);
 Route::resource('/category',CategoryController::class);
 Route::resource('/user',UserController::class);
 
-Route::resource('/Clothes',ClothController::class);
 
-Route::get('/Clothes', [ClothController::class, 'uishowclothes'])->name('Clothes.uishowclothes');
+
+Route::get('/showClothes', [ClothController::class, 'uishowclothes'])->name('showClothes.uishowclothes');
+Route::post('/storeDonate',[ClothController::class,'uistoreDonate'])->name('storeDonate.uistoreDonate');
+
+Route::get('/Donate', [ClothController::class, 'uishowDonate'])->name('Donate.uishowDonate');
+
 
  
 

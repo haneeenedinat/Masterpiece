@@ -34,10 +34,10 @@
             <a class="nav-a active" aria-current="page" href="/" >Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="/Donate">Donate</a>
+            <a class="nav-a" href="{{route('Donate.uishowDonate')}}">Donate</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="/Clothes">Clothes</a>
+            <a class="nav-a" href="{{route('showClothes.uishowclothes')}}">Clothes</a>
             </li>
             <li class="nav-item">
             <a class="nav-a" href="/contact-us">ContactUs</a>

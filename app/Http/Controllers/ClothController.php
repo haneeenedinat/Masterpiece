@@ -183,5 +183,30 @@ class ClothController extends Controller
     return view('ui.clothes',compact('cloths'));
     }
 
+    public function uishowDonate(){
+
+        $Categories=Category::all();
+
+        return view("ui.Donate",compact("Categories"));
+    }
+
+    public function uistoreDonate(Request $request){
+        Cloth::create($request->all());
+        $cloths= DB::table('cloths')->select([
+            'cloths.id',
+            'users.name',
+            'cloths.cloth_name',
+            'cloths.cloth_img',
+            'cloths.categorie_id',
+            'cloths.cloth_description',
+            'categories.categorie_name',
+            'users.name',
+        ])->Join('users','cloths.user_id', '=', 'users.id')
+        ->Join('categories','categories.id', '=','cloths.categorie_id')
+        ->get();
+    return view('ui.clothes',compact('cloths'));
+
+    }
+
     
 }
