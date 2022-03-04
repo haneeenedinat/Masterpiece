@@ -1,4 +1,4 @@
-.DonorsContainer {
+/* .DonorsContainer {
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -92,4 +92,74 @@
 
 
 
+ */
+ 
+.Donate .Donateh2{
+    text-align: center;
+    margin: 2em 0;
+}
 
+.DonateImgForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+
+
+.DonateImgForm form{
+    display: flex;
+    flex-direction: column;
+}
+
+.DonateImgForm form input, .DonateImgForm form textarea  {
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    margin-bottom: 5px;
+    width: 50vw;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+ .DonateImgForm form select {
+    border: 1px solid rgba(0, 0, 0, 0.11);
+    margin-bottom: 5px;
+    /* width: 35vw; */
+    border-radius: 5px;
+    padding: 1em;
+ }
+
+.DonateImgForm form button{
+    height: 7vh;
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color:white;
+}
+
+.DonateImgForm img{
+    /* width: 40vw; */
+}
+
+@media (max-width:998px) {
+    .DonateImgForm img{
+        width: 40vw;
+    }
+}
+
+@media (max-width:600px) {
+    .DonateImgForm {
+        display: flex;
+       flex-direction: column;
+       margin-bottom: 2em;
+    }
+
+    .DonateImgForm img{
+        width: 60vw;
+    }
+
+    .DonateImgForm form input {
+        width: 90vw;
+
+    }
+}

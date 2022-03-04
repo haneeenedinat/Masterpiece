@@ -4,24 +4,24 @@
 @extends('layouts.footer')
 @extends('layouts.header')
 @section('content')
-<div  class="DonorsContainer">
-      <h3>Donors Form</h3>
+<!-- <div  class="DonorsContainer"> -->
+      <!-- <h3>Donors Form</h3>  -->
 
-      <form method="post" action="{{route('storeDonate.uistoreDonate')}}" >
+      <!-- <form method="post" action="{{route('storeDonate.uistoreDonate')}}" >
       @csrf
         <div class="form-group">
           <label for="add_product">Cloth Name</label>
           <input class="form-control" type="text"  name="cloth_name" id ="cloth_name" required/>
           <p class="Msg1"></p>
         </div>
-        <!-- <p>{MessageProductName}</p> -->
+        <p>{MessageProductName}</p>
         <div class="form-group">
           <label for="add_product">Cloth description</label>
           <input class="form-control" type="text" name="cloth_description" id ="cloth_description"  required />
           <p class="Msg2"></p>
 
         </div>
-         <!-- <p>{MessageProductDescription}</p> -->
+         <p>{MessageProductDescription}</p>
          <div class="form-group">
           <label for="add_product">Cloth Image</label>
           <input class="form-control" type="file" name="cloth_img"  required />
@@ -42,7 +42,7 @@
            @endforeach
           </select>
         </div>
-        <!-- <p>{MessageSelectCategory}</p> -->
+        <p>{MessageSelectCategory}</p>
         <div class="form-group">
           <input
             class="btn btn-primary"
@@ -53,8 +53,38 @@
             id='submit'
           />
         </div>
-        </form>
+        </form> -->
+        <!-- </div> -->
+
+     <div class="Donate">
+      <div class="Donateh2">
+        <h2>Donors Form</h2>
+      </div>
+    
+      <div class="DonateImgForm">
+        <div>
+          <img src="../assets/img/cartempty.png" alt="ContactUs Img" />
         </div>
+        <div class="DonateForm">
+        <form method="post" action="{{route('storeDonate.uistoreDonate')}}" >
+        @csrf
+        <input  type="text"  name="cloth_name" placeholder="Cloth Name" id="cloth_name" required/>
+        <input  type="text" name="cloth_description" placeholder="Cloth description" id ="cloth_description"  required />
+        <input  type="text" placeholder="Cloth Image"  name="cloth_img"  required />
+        <input  type="text" placeholder="Cloth Size : S,L,M,XL Or 36,38,40" name="size" id ="size"  required />
+        <select   name="categorie_id" id ="categorie_id"  required>                                        
+              <option selected>select category name</option>
+             @foreach($Categories as $Category)                                     
+            <option value="{{$Category->id}}">{{$Category->categorie_name}}</option>
+           @endforeach
+          </select>
+          <button type="submit" >Add Cloth</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
   
     <script src='js2/scripts.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>

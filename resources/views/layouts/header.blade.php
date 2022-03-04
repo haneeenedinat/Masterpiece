@@ -59,10 +59,10 @@
                                 </li>
                             @endif
                         @else
-
+                        <li class="nav-item">
+                        <a  href="/userCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                         </li>
                             <li class="nav-item">
-                            <a  href="/userCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
-
                                 @if(Auth::user()->role=="admin")
                                 <a  href="admin"
                                      >

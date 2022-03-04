@@ -32,9 +32,9 @@ Route::get('/contact-us', function () {
     return view('ui.contactus');
 });
 
-Route::get('/Donate',function (){
-return view('ui.Donate');
-});
+// Route::get('/Donate',function (){
+// return view('ui.Donate');
+// });
 
 
 
