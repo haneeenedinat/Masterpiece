@@ -23,7 +23,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">edit cloth</h3></div>
                                     <div class="card-body">
-                                        <form method="post" action="{{route('cloth.update',$cloth->id)}}">
+                                        <form method="post" action="{{route('cloth.update',$cloth->id)}}" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
                                             <div class="row mb-3">
@@ -35,7 +35,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="cloth_img" value="{{$cloth->cloth_img}}" required/>
+                                                        <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" value="../assets/img/{{$cloth->cloth_img}}" required/>
                                                         <label for="inputPasswordConfirm">image</label>
                                                     </div>
                                                 </div>

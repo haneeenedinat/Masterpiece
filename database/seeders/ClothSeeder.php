@@ -17,39 +17,40 @@ class ClothSeeder extends Seeder
     {
       DB::table('cloths')->insert([
       [
+
         'cloth_name'=>'trouser',
-        'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
+        'cloth_img'=>'clothes.jpeg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'3',
         'size'=>'L',
-        'available'=>'1',
+        'available'=>'yes',
         'user_id'=>'1',
       ],
       [
         'cloth_name'=>'trouser',
-        'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
+        'cloth_img'=>'clothes2.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'3',
         'size'=>'M',
-        'available'=>'1',
+        'available'=>'yes',
         'user_id'=>'1',
       ],
       [
         'cloth_name'=>'trouser',
-        'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
+        'cloth_img'=>'clothes4.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'1',
         'size'=>'XL',
-        'available'=>'1',
+        'available'=>'yes',
         'user_id'=>'1',
       ],
       [
         'cloth_name'=>'trouser',
-        'cloth_img'=>'https://img.bestdealplus.com/ae04/kf/H6eab9d215f69452a931e993f8a6e2466S.jpg',
+        'cloth_img'=>'ContactUs2.png',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'2',
         'size'=>'S',
-        'available'=>'1',
+        'available'=>'yes',
         'user_id'=>'1',
       ],
       ]);

@@ -23,7 +23,7 @@
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
                                     <div class="card-header"><h3 class="text-center font-weight-light my-4">Create cloth</h3></div>
                                     <div class="card-body">
-                                        <form method="post" action="{{route('cloth.store')}}">
+                                        <form method="post" action="{{route('cloth.store')}}" enctype="multipart/form-data">
                                         @csrf
                                             <div class="row mb-3">
                                                 <!-- <div class="col-md-6"> -->
@@ -34,8 +34,8 @@
                                                 <!-- </div> -->
                                                 <!-- <div class="col-md-6"> -->
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="cloth_img" required/>
-                                                        <!-- <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" required/> -->
+                                                        <!-- <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="cloth_img" required/> -->
+                                                        <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" required/>
 
 
                                                         <label for="inputPasswordConfirm" style="margin-left:1em">image</label>

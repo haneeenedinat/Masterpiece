@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{asset('css2\contactus.css')}}" >
     <link rel="stylesheet" href="{{asset('css2\Donate.css')}}" >
     <link rel="stylesheet" href="{{asset('css2\clothes.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\profile.css')}}" >
 <!-- cdnj -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -60,11 +61,11 @@
                             @endif
                         @else
                         <li class="nav-item">
-                        <a  href="/userCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+                        <a  href="{{route('profile.showprofile')}}">profile</a>
                          </li>
                             <li class="nav-item">
                                 @if(Auth::user()->role=="admin")
-                                <a  href="admin"
+                                <a  href="cloth"
                                      >
                                         {{ __('dashboard') }}
                                     </a>

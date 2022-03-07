@@ -1,0 +1,100 @@
+.SelectedServicesInformationProfile table th {
+    border-bottom: 1px solid #bfd4d8;
+    width: 60vw;
+    padding: 1em 0;
+  }
+  
+  .Profile{
+  
+      display: flex;
+      flex-direction: column;
+      margin: 2em;
+  }
+
+  th img{
+ width: 10vw;
+ /* width: auto; */
+    /* height: 100px; */
+  }
+  
+  .ProfileInformation {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+  }
+  
+  /* .ProfileImgInformation .divImg img {
+    width: 35vw;
+    
+  
+  } */
+  /* .ProfileImgInformation  .divImg{
+      border-right: 1px solid #dbdee1;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  
+  .ProfileImgInformation {
+    width: 80%;
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid #dbdee1;
+    box-shadow: 1px 1px 10px #bfd4d8;
+  }
+  
+  .Profile .ProfileTitle{
+      margin: 2em auto;
+      
+  }
+  
+  .ProfileInformationUserName ,.ProfileInformationEmail{
+      margin: 0.6em 0;
+    
+  }
+  
+  /* .ProfileInformationUserName h2,.SelectedServicesInformationProfile h2{
+      margin: 1em 0;
+      font-size: 1.5em;
+  } */
+
+  .ProfileInformation h3{
+    font-size: 1.3em;
+    margin: 1em 0;
+
+}
+
+.ProfileInformation h2{
+  font-size: 1.3em;
+  margin: 1em 0;
+
+}
+  
+  @media (max-width:726px) {
+      .ProfileImgInformation {
+        flex-direction: column;
+        width: 100%;
+      }
+      th img{
+        width: 20vw;
+      
+         }
+      /* .ProfileImgInformation  .divImg{
+          border:none;
+          border-bottom: 1px solid #dbdee1;
+        } */
+  
+        /* .ProfileImgInformation .divImg img {
+          width: 60vw;
+        } */
+  
+        /* .ProfileInformationUserName h2,.SelectedServicesInformationProfile h2{
+             font-size: 1em;
+        }
+  
+        .ProfileInformation h3{
+            font-size: 1em;
+        } */
+          
+  }
+  

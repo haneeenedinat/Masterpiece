@@ -99,7 +99,7 @@
     font-weight: 600;
   }
   
-  .btn-icon {
+  /* .btn-icon {
     width: 1.5em;
   }
   
@@ -108,17 +108,17 @@
     border-right: 1px solid #888585;
     position: relative;
     right: -0.3125em;
-  }
+  } */
   
   
   
-  .add-to-cart-btn:hover {
+  /* .add-to-cart-btn:hover {
     cursor: pointer;
     box-shadow: 1px 0px 0px 0px #aca9a9;
     background-color: #efb436d0;
-  }
+  } */
   
-  .add-to-cart-btn {
+  /* .add-to-cart-btn {
     display: flex;
     gap: 0.4375em;
     margin-top: 0.5em;
@@ -132,7 +132,7 @@
     justify-content: center;
     transition: background-color 0.5s ease;
   }
-  
+   */
   .image-containerCard img:hover {
     transform: scale(1.1);
   }

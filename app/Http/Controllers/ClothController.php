@@ -21,6 +21,22 @@ class ClothController extends Controller
     public function index()
     {
         //
+
+        $cloths= DB::table('cloths')->select([
+            'cloths.id',
+            'cloths.cloth_name',
+            'cloths.cloth_img',
+            'cloths.size',
+            'cloths.categorie_id',
+            'cloths.cloth_description',
+            'categories.categorie_name',
+            'users.id',
+            'users.name',
+        ])->Join('users','cloths.user_id', '=', 'users.id')
+        ->Join('categories','categories.id', '=','cloths.categorie_id')
+        ->get();
+       return view('admin.tables',compact('cloths'));
+    
     }
 
     /**
@@ -46,31 +62,13 @@ class ClothController extends Controller
     {
 
 
-        // $img=$request->cloth_img;
-        // $extenstion = $img->getClientOriginalName();
-        // $extension = $file->extension();
-        // $img->move('../public/assets/img/', $extenstion);
+        $img=$request->cloth_img;
+        $extenstion = $img->getClientOriginalName();
+        $img->move('../public/assets/img/', $extenstion);
 
-        // $path = $request->file('cloth_img')->store('public/assets/img/');
-        // $path = Storage::putFileAs(
-        //     'assets/img/', $request->file('cloth_img')
-        // );
-
-        // $cloth = new Cloth;
-        // $cloth->cloth_img = $request->cloth_img;
-        // $image= uniqid() . $request->file('cloth_img')->getClientOriginalName();
-        //         $path = $request->file('cloth_img')->storeAs('uploads', $image , '../public/assets/img/');
-        //         $cloth->cloth_img = '/storage/' . $path;
-        //         $cloth->cloth_name =$request->cloth_name;
-        //         $cloth->categorie_id =$request->categorie_id;
-        //         $cloth->cloth_description =$request->cloth_description;
-
-        //         $cloth->save();
-
-        // Cloth::create($request->all());
 
         $cloth_name = $request->input('cloth_name');
-        $cloth_img = $request->input('cloth_img');
+        $cloth_img = $request->file('cloth_img')->getClientOriginalName();
         $cloth_description = $request->input('cloth_description');
         $size = $request->input('size');
         $categorie_id  = $request->input('categorie_id');
@@ -139,8 +137,32 @@ class ClothController extends Controller
      */
     public function update(Request $request, Cloth $cloth)
     {
+
+        $img=$request->cloth_img;
+        $extenstion = $img->getClientOriginalName();
+        // dd($extenstion);
+        // $extension = $file->extension();
+        $img->move('../public/assets/img/', $extenstion);
    
-        $cloth->update($request->all());
+        $cloth_name = $request->input('cloth_name');
+        $cloth_img = $request->file('cloth_img')->getClientOriginalName();
+     
+        $cloth_description = $request->input('cloth_description');
+        $size = $request->input('size');
+        $categorie_id  = $request->input('categorie_id');
+        $user_id = Auth::user()->id;
+
+        $data = array(
+        'cloth_name'=>$cloth_name,
+        "cloth_img"=>$cloth_img,
+        "cloth_description"=>$cloth_description,
+        "size"=>$size,
+        "categorie_id"=>$categorie_id,
+        "user_id"=>$user_id,
+    );
+    DB::table('cloths')->where('id', $cloth->id)->update($data);
+
+   
         $cloths= DB::table('cloths')->select([
             'cloths.id',
             'users.name',
@@ -192,7 +214,7 @@ class ClothController extends Controller
     }
 
     public function uishowclothes(Cloth $cloth){
-        if((Cloth::where('available','1')->count()) !=0){
+        if((Cloth::where('available','yes')->count()) !=0){
             $cloths= DB::table('cloths')->select([
                 'cloths.id',
                 'users.name',
@@ -225,8 +247,15 @@ class ClothController extends Controller
     public function uistoreDonate(Request $request){ 
         if(Auth::check()){
         // Cloth::create($request->all());
+
+        $img=$request->cloth_img;
+        $extenstion = $img->getClientOriginalName();
+        // dd($extenstion);
+        // $extension = $file->extension();
+        $img->move('../public/assets/img/', $extenstion);
+
         $cloth_name = $request->input('cloth_name');
-        $cloth_img = $request->input('cloth_img');
+        $cloth_img = $request->file('cloth_img')->getClientOriginalName();
         $cloth_description = $request->input('cloth_description');
         $size = $request->input('size');
         $categorie_id  = $request->input('categorie_id');
@@ -258,7 +287,8 @@ class ClothController extends Controller
         ])->Join('users','cloths.user_id', '=', 'users.id')
         ->Join('categories','categories.id', '=','cloths.categorie_id')
         ->get();
-    return view('ui.clothes',compact('cloths'));}
+    return view('ui.clothes',compact('cloths'));
+}
     else{
         return redirect('/login');
     }
@@ -267,9 +297,9 @@ class ClothController extends Controller
 
     public function AddClotheToCart(Request $request, Cloth $cloth){
         if(Auth::check()){
-           
-        DB::table('cloths')->where('id', $cloth->id)->update(['available' => 0]);
-        if((Cloth::where('available','1')->count()) !=0){
+            $beneficiary_name = Auth::user()->name; 
+        DB::table('cloths')->where('id', $cloth->id)->update(['available' => 'No' , 'beneficiary_name'=>$beneficiary_name]);
+        if((Cloth::where('available','yes')->count()) !=0){
         $cloths= DB::table('cloths')->select([
             'cloths.id',
             'users.name',
@@ -293,6 +323,26 @@ class ClothController extends Controller
        else{
            return redirect('/login');
        }
+    }
+
+    public function showprofile(Cloth $cloth){
+        
+         $user_login_name = Auth::user()->name; 
+         $user_login_id= Auth::user()->id;
+         $availableNo=DB::table('cloths')->where('available','No')->get();
+         $availableyes=DB::table('cloths')->where('available','yes')->get();
+
+        if(!empty($availableNo)){
+        $profile=DB::table('cloths')->where('beneficiary_name',$user_login_name)->get();
+        return view('ui.profile',compact('profile'));
+         }
+         if(!empty($availableyes)){
+        $profile=DB::table('cloths')->where('user_id',$user_login_id)->get();
+        return view('ui.profile',compact('profile'));
+         }
+    
+     
+
     }
 
     

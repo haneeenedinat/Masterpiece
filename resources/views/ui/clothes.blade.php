@@ -6,10 +6,10 @@
 <h2 class="titleProducts"> Clothes</h2>
 <div class="main-containerProduct">
     @foreach($cloths as $cloth)
-    @if( $cloth->available == '1')
+    @if( $cloth->available == 'yes')
       <div class="Card">
         <div class="image-containerCard">
-          <img src="{{$cloth->cloth_img}}" alt="{{$cloth->cloth_img}}" />
+          <img src="../assets/img/{{$cloth->cloth_img}}" alt="{{$cloth->cloth_img}}" />
         </div>
         <div class="information-containerCard">
          <div class="card-title">{{$cloth->cloth_name}}</div>

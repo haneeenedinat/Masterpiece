@@ -17,21 +17,20 @@ class AdminController extends Controller
      */
     public function index()
     {
-
-        $cloths= DB::table('cloths')->select([
-            'cloths.id',
-            'cloths.cloth_name',
-            'cloths.cloth_img',
-            'cloths.size',
-            'cloths.categorie_id',
-            'cloths.cloth_description',
-            'categories.categorie_name',
-            'users.id',
-            'users.name',
-        ])->Join('users','cloths.user_id', '=', 'users.id')
-        ->Join('categories','categories.id', '=','cloths.categorie_id')
-        ->get();
-       return view('admin.tables',compact('cloths'));
+    //     $cloths= DB::table('cloths')->select([
+    //         'cloths.id',
+    //         'cloths.cloth_name',
+    //         'cloths.cloth_img',
+    //         'cloths.size',
+    //         'cloths.categorie_id',
+    //         'cloths.cloth_description',
+    //         'categories.categorie_name',
+    //         'users.id',
+    //         'users.name',
+    //     ])->Join('users','cloths.user_id', '=', 'users.id')
+    //     ->Join('categories','categories.id', '=','cloths.categorie_id')
+    //     ->get();
+    //    return view('admin.tables',compact('cloths'));
     }
 
     /**

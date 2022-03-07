@@ -66,11 +66,13 @@
           <img src="../assets/img/cartempty.png" alt="ContactUs Img" />
         </div>
         <div class="DonateForm">
-        <form method="post" action="{{route('storeDonate.uistoreDonate')}}" >
+        <form method="post" action="{{route('storeDonate.uistoreDonate')}}" enctype="multipart/form-data">
         @csrf
         <input  type="text"  name="cloth_name" placeholder="Cloth Name" id="cloth_name" required/>
         <input  type="text" name="cloth_description" placeholder="Cloth description" id ="cloth_description"  required />
-        <input  type="text" placeholder="Cloth Image"  name="cloth_img"  required />
+        <!-- <input  type="text" placeholder="Cloth Image"  name="cloth_img"  required /> -->
+        <input  type="file" placeholder="Cloth Image" name="cloth_img" required/>
+
         <input  type="text" placeholder="Cloth Size : S,L,M,XL Or 36,38,40" name="size" id ="size"  required />
         <select   name="categorie_id" id ="categorie_id"  required>                                        
               <option selected>select category name</option>

@@ -63,8 +63,8 @@
                                         <tr>
                                         <td width="200vw">{{$cloth->name}}</td>
                                             <td width="200vw">{{$cloth->cloth_name}}</td>   
-                                            <!-- <td><img src="../public/assets/img/{{$cloth->cloth_img}}" alt="{{$cloth->cloth_name}}" width="400vw"/></td> -->
-                                            <td><img src="{{$cloth->cloth_img}}" alt="{{$cloth->cloth_name}}" width="400vw"/></td>
+                                            <td><img src="../assets/img/{{$cloth->cloth_img}}" alt="{{$cloth->cloth_name}}" width="300vw"/></td>
+                                            <!-- <td><img src="{{$cloth->cloth_img}}" alt="{{$cloth->cloth_name}}" width="400vw"/></td> -->
 
                                             <td width="200vw">{{$cloth->cloth_description}}</td>
                                             <td width="200vw">{{$cloth->categorie_name}}</td>

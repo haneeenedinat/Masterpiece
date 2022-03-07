@@ -40,7 +40,7 @@ Route::get('/contact-us', function () {
 
 Auth::routes();
 
-Route::resource('/admin',AdminController::class);
+
 Route::resource('/cloth',ClothController::class);
 Route::resource('/category',CategoryController::class);
 Route::resource('/user',UserController::class);
@@ -52,6 +52,8 @@ Route::post('/storeDonate',[ClothController::class,'uistoreDonate'])->name('stor
 
 Route::get('/Donate', [ClothController::class, 'uishowDonate'])->name('Donate.uishowDonate');
 Route::put('/addClothe/{cloth}',[ClothController::class,'AddClotheToCart'])->name('addClothe.AddClotheToCart');
+
+Route::get('/profile',[ClothController::class,'showprofile'])->name('profile.showprofile');
 
 
  
