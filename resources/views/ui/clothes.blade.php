@@ -19,7 +19,7 @@
             <form method='post' action="{{route('addClothe.AddClotheToCart',$cloth->id)}}">
             @csrf
             @method('PUT')
-            <button type="submit" class='icon'> <i class="fa-solid fa-thumbs-up"></i></button>
+            <button type="submit" class='icon'>Book</button>
             </form>
          
           </div>

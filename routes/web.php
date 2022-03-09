@@ -42,8 +42,20 @@ Auth::routes();
 
 
 Route::resource('/cloth',ClothController::class);
-Route::resource('/category',CategoryController::class);
-Route::resource('/user',UserController::class);
+// Route::resource('/category',CategoryController::class);
+// Route::resource('/user',UserController::class);
+
+
+Route::group(['middleware'=>['auth','admin']],function(){
+    Route::resource('/admin',AdminController::class);
+    Route::resource('/category',CategoryController::class);
+    Route::resource('/user',UserController::class);
+});
+
+
+Route::group(['middleware'=>['auth']],function(){
+    Route::get('/profile',[ClothController::class,'showprofile'])->name('profile.showprofile');
+});
 
 
 
@@ -53,7 +65,7 @@ Route::post('/storeDonate',[ClothController::class,'uistoreDonate'])->name('stor
 Route::get('/Donate', [ClothController::class, 'uishowDonate'])->name('Donate.uishowDonate');
 Route::put('/addClothe/{cloth}',[ClothController::class,'AddClotheToCart'])->name('addClothe.AddClotheToCart');
 
-Route::get('/profile',[ClothController::class,'showprofile'])->name('profile.showprofile');
+
 
 
  

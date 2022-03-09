@@ -19,6 +19,8 @@ class CreateClothsTable extends Migration
             $table->string('cloth_img');
             $table->string('cloth_description');
             $table->string('size');
+            
+            $table->string("Access_time")->default(date('d-m-Y'));
             $table->string('beneficiary_name')->default('admin');
             $table->enum('available',['yes','No'])->default('yes');
             $table->unsignedBigInteger('categorie_id');

@@ -53,7 +53,7 @@
                                             <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                        
-                                                         <select class="form-select" aria-label="Default select example" name="categorie_id" required>
+                                                         <!-- <select class="form-select" aria-label="Default select example" name="categorie_id" required>
                                                          
                                                        <option selected>select category name</option>
                                                        @foreach($Categories as $Category)
@@ -64,9 +64,39 @@
                                                         @endif
                                                         >{{$Category->categorie_name}}</option>
                                                         @endforeach
-                                                          </select>
+                                                          </select> -->
+                                                    </div>
+                                                    <!-- <div class="col-md-6">
+                                                    <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="available" value="{{$cloth->available}}" required/>
+                                                        <label for="inputPasswordConfirm">available</label>
+                                                    </div>
+                                                </div> -->
+                                                </div>
+
+                                                <div class="row mb-3">
+                                                <div class="col-md-6">
+                                                <select style="height:8vh" class="form-select" aria-label="Default select example" name="categorie_id" required>
+                                                         
+                                                         <option selected>select category name</option>
+                                                         @foreach($Categories as $Category)
+                                                    
+                                                          <option value="{{$Category->id}}" 
+                                                          @if($cloth->categorie_id == $Category->id)
+                                                            selected
+                                                          @endif
+                                                          >{{$Category->categorie_name}}</option>
+                                                          @endforeach
+                                                            </select>
+                                                </div>
+                                                <div class="col-md-6">
+                                                <div class="form-floating mb-3 mb-md-0">
+                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="available" value="{{$cloth->available}}" required/>
+                                                        <label for="inputPasswordConfirm">available</label>
                                                     </div>
                                                 </div>
+                                              
+                                            </div>
                                                 
                                             </div>
                                             <div class="mt-4 mb-0">

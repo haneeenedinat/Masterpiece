@@ -22,20 +22,21 @@ class ClothController extends Controller
     {
         //
 
-        $cloths= DB::table('cloths')->select([
-            'cloths.id',
-            'cloths.cloth_name',
-            'cloths.cloth_img',
-            'cloths.size',
-            'cloths.categorie_id',
-            'cloths.cloth_description',
-            'categories.categorie_name',
-            'users.id',
-            'users.name',
-        ])->Join('users','cloths.user_id', '=', 'users.id')
-        ->Join('categories','categories.id', '=','cloths.categorie_id')
-        ->get();
-       return view('admin.tables',compact('cloths'));
+    //     $cloths= DB::table('cloths')->select([
+    //         'cloths.id',
+    //         'cloths.cloth_name',
+    //         'cloths.cloth_img',
+    //         'cloths.size',
+    //         'cloths.available',
+    //         'cloths.categorie_id',
+    //         'cloths.cloth_description',
+    //         'categories.categorie_name',
+    //         'users.id',
+    //         'users.name',
+    //     ])->Join('users','cloths.user_id', '=', 'users.id')
+    //     ->Join('categories','categories.id', '=','cloths.categorie_id')
+    //     ->get();
+    //    return view('admin.tables',compact('cloths'));
     
     }
 
@@ -149,6 +150,7 @@ class ClothController extends Controller
      
         $cloth_description = $request->input('cloth_description');
         $size = $request->input('size');
+        $available=$request->input('available');
         $categorie_id  = $request->input('categorie_id');
         $user_id = Auth::user()->id;
 
@@ -157,6 +159,8 @@ class ClothController extends Controller
         "cloth_img"=>$cloth_img,
         "cloth_description"=>$cloth_description,
         "size"=>$size,
+        "available"=>$available,
+        'beneficiary_name'=>'admin',
         "categorie_id"=>$categorie_id,
         "user_id"=>$user_id,
     );
@@ -298,7 +302,8 @@ class ClothController extends Controller
     public function AddClotheToCart(Request $request, Cloth $cloth){
         if(Auth::check()){
             $beneficiary_name = Auth::user()->name; 
-        DB::table('cloths')->where('id', $cloth->id)->update(['available' => 'No' , 'beneficiary_name'=>$beneficiary_name]);
+            $tomorrow = date("d-m-Y", strtotime("+1 day"));
+        DB::table('cloths')->where('id', $cloth->id)->update(['available' => 'No' , 'beneficiary_name'=>$beneficiary_name,"Access_time"=>$tomorrow]);
         if((Cloth::where('available','yes')->count()) !=0){
         $cloths= DB::table('cloths')->select([
             'cloths.id',
@@ -331,6 +336,8 @@ class ClothController extends Controller
          $user_login_id= Auth::user()->id;
          $availableNo=DB::table('cloths')->where('available','No')->get();
          $availableyes=DB::table('cloths')->where('available','yes')->get();
+
+     
 
         if(!empty($availableNo)){
         $profile=DB::table('cloths')->where('beneficiary_name',$user_login_name)->get();

@@ -16,29 +16,31 @@
             <div>
           <div class="ProfileInformationUserName">
               <h3>personal information</h3>
-            <h3>UserName : UserLogin.UserName</h3>
+            <h3>UserName : {{Auth::user()->name}}</h3>
           </div>
 
           <div class="ProfileInformationEmail">
-            <h3>Email : UserLogin.Email </h3>
+            <h3>Email :{{Auth::user()->email}}</h3>
           </div>
 
           </div>
 
           <div class="SelectedServicesInformationProfile">
-              <h2>Services information</h2>
+              <h2>Clothes information</h2>
               <table>
           <thead>
           <tr>
             <th>cloth_img</th>
             <th>cloth_name</th>
             <th>size</th>
+            <th>Access time</th>
           </tr>
           @foreach($profile as $profileUser)
           <tr>
             <th><img src="../assets/img/{{$profileUser->cloth_img}}" alt="{{$profileUser->cloth_img}}"/></th>
             <th>{{$profileUser->cloth_name}}</th>
             <th>{{$profileUser->size}}</th>
+            <th>{{$profileUser->Access_time}}</th>
           </tr>
           @endforeach
         </thead>

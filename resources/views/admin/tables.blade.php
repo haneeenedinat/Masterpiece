@@ -39,6 +39,7 @@
                                             <th>Cloth description</th>
                                             <th>Categorie name</th>
                                             <th>Size</th>
+                                            <th>available</th>
                                            <th>Edit</th> 
                                            <th>Delete</th>
                                         </tr>
@@ -51,6 +52,7 @@
                                             <th>Cloth description</th>
                                             <th>Categorie name</th>
                                             <th>Size</th>
+                                            <th>available</th>
                                             <td>Edit</td>
                                             <td>Delete</td>
                                          
@@ -64,11 +66,10 @@
                                         <td width="200vw">{{$cloth->name}}</td>
                                             <td width="200vw">{{$cloth->cloth_name}}</td>   
                                             <td><img src="../assets/img/{{$cloth->cloth_img}}" alt="{{$cloth->cloth_name}}" width="300vw"/></td>
-                                            <!-- <td><img src="{{$cloth->cloth_img}}" alt="{{$cloth->cloth_name}}" width="400vw"/></td> -->
-
                                             <td width="200vw">{{$cloth->cloth_description}}</td>
                                             <td width="200vw">{{$cloth->categorie_name}}</td>
                                             <td width="200vw">{{$cloth->size}}</td>
+                                            <td width="200vw">{{$cloth->available}}</td>
                                             <td><button class="edit"  style="background-color:green !important;color:white;border:none;padding:0.5rem;border-radius:3px"><a style="text-decoration:none; color:white" href="{{route('cloth.edit',$cloth->id)}}">edit</a></button></td>
                                           
                                             <td>
