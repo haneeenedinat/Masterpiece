@@ -67,7 +67,6 @@ class ClothController extends Controller
         $extenstion = $img->getClientOriginalName();
         $img->move('../public/assets/img/', $extenstion);
 
-
         $cloth_name = $request->input('cloth_name');
         $cloth_img = $request->file('cloth_img')->getClientOriginalName();
         $cloth_description = $request->input('cloth_description');
@@ -250,12 +249,9 @@ class ClothController extends Controller
 
     public function uistoreDonate(Request $request){ 
         if(Auth::check()){
-        // Cloth::create($request->all());
-
+    
         $img=$request->cloth_img;
         $extenstion = $img->getClientOriginalName();
-        // dd($extenstion);
-        // $extension = $file->extension();
         $img->move('../public/assets/img/', $extenstion);
 
         $cloth_name = $request->input('cloth_name');
@@ -302,7 +298,7 @@ class ClothController extends Controller
     public function AddClotheToCart(Request $request, Cloth $cloth){
         if(Auth::check()){
             $beneficiary_name = Auth::user()->name; 
-            $tomorrow = date("d-m-Y", strtotime("+1 day"));
+            $tomorrow = date("d-m-Y", strtotime("+7 day"));
         DB::table('cloths')->where('id', $cloth->id)->update(['available' => 'No' , 'beneficiary_name'=>$beneficiary_name,"Access_time"=>$tomorrow]);
         if((Cloth::where('available','yes')->count()) !=0){
         $cloths= DB::table('cloths')->select([
@@ -331,23 +327,29 @@ class ClothController extends Controller
     }
 
     public function showprofile(Cloth $cloth){
-        
+        $profile=[];
          $user_login_name = Auth::user()->name; 
          $user_login_id= Auth::user()->id;
-         $availableNo=DB::table('cloths')->where('available','No')->get();
-         $availableyes=DB::table('cloths')->where('available','yes')->get();
+        //  $availableNo=DB::table('cloths')->where('available','No')->get();
+        //  $availableyes=DB::table('cloths')->where('available','yes')->get();
+       $availableNo=DB::table('cloths')->where('available','No')->where('beneficiary_name',$user_login_name)->get();
+     $availableyes=DB::table('cloths')->where('available','yes')->where('user_id',$user_login_id)->get();
+    //   dd($availableyes);
+    // dd($availableNo);
 
-     
-
-        if(!empty($availableNo)){
-        $profile=DB::table('cloths')->where('beneficiary_name',$user_login_name)->get();
-        return view('ui.profile',compact('profile'));
+        if(count($availableNo) > 0){
+        $profile=$availableNo;
+        // dd($profile);
+        // return view('ui.profile',compact('profile'));
          }
-         if(!empty($availableyes)){
-        $profile=DB::table('cloths')->where('user_id',$user_login_id)->get();
-        return view('ui.profile',compact('profile'));
+         if(count($availableyes) > 0){
+        $profile=$availableyes;
+        // dd($profile);
+
+        // return view('ui.profile',compact('profile'));
          }
     
+        return view('ui.profile',compact('profile'));
      
 
     }

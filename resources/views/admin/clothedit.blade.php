@@ -53,25 +53,6 @@
                                             <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                        
-                                                         <!-- <select class="form-select" aria-label="Default select example" name="categorie_id" required>
-                                                         
-                                                       <option selected>select category name</option>
-                                                       @foreach($Categories as $Category)
-                                                  
-                                                        <option value="{{$Category->id}}" 
-                                                        @if($cloth->categorie_id == $Category->id)
-                                                          selected
-                                                        @endif
-                                                        >{{$Category->categorie_name}}</option>
-                                                        @endforeach
-                                                          </select> -->
-                                                    </div>
-                                                    <!-- <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="available" value="{{$cloth->available}}" required/>
-                                                        <label for="inputPasswordConfirm">available</label>
-                                                    </div>
-                                                </div> -->
                                                 </div>
 
                                                 <div class="row mb-3">
@@ -111,20 +92,6 @@
                     </div>
                 </main>
             </div>
-            <!-- <div id="layoutAuthentication_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div> -->
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js2/scripts.js"></script>

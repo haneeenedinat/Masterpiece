@@ -10,9 +10,7 @@
         <link href="{{asset('css2/styles.css')}}" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <body >
-
-            
+    <body >           
             @section('content')
         <div id="layoutAuthentication">
             <div id="layoutAuthentication_content">
@@ -25,21 +23,15 @@
                                     <div class="card-body">
                                         <form method="post" action="{{route('category.store')}}">
                                         @csrf
-
                                         <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputEmail" type="text" placeholder="Enter Category name" name="categorie_name" required  />
                                                 <label for="inputEmail">categorie name</label>
-                                            </div>
-
-                                           
+                                            </div>                                          
                                             <div class="mt-4 mb-0">
                                                 <div class="d-grid"><button type="submit">Create cloth</button></div>
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -63,6 +55,5 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('js2/scripts.js')}}"></script>
-
     </body>
 </html>

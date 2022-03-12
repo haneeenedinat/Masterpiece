@@ -12,7 +12,7 @@ function nameTracker() {
   if (namecloth.value.length < 3 ) {
     Msg1.style.color = "red";
     Msg1.innerHTML = "TheName length must be greater than 3 characters";
-    nameclothState = true;
+    // nameclothState = true;
  
   } else {
     Msg1.innerHTML = " ";

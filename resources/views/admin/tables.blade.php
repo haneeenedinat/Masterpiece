@@ -55,9 +55,6 @@
                                             <th>available</th>
                                             <td>Edit</td>
                                             <td>Delete</td>
-                                         
-
-
                                         </tr>
                                     </tfoot>
                                     <tbody>

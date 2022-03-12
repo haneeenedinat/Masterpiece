@@ -7,11 +7,6 @@
       </div>
 
       <div class="ProfileImgInformation">
-      
-      <!-- <div class="divImg">
-          <img src="../assets/img/Profile.png" alt="Profile Img" />
-          </div> -->
-
         <div class="ProfileInformation">
             <div>
           <div class="ProfileInformationUserName">
@@ -35,6 +30,7 @@
             <th>size</th>
             <th>Access time</th>
           </tr>
+  
           @foreach($profile as $profileUser)
           <tr>
             <th><img src="../assets/img/{{$profileUser->cloth_img}}" alt="{{$profileUser->cloth_img}}"/></th>
@@ -43,9 +39,9 @@
             <th>{{$profileUser->Access_time}}</th>
           </tr>
           @endforeach
+   
         </thead>
         </table>
-            <!-- <div>TimeSelectedRender</div> -->
           </div>
         </div>
       </div>

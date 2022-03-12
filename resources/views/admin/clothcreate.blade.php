@@ -26,37 +26,26 @@
                                         <form method="post" action="{{route('cloth.store')}}" enctype="multipart/form-data">
                                         @csrf
                                             <div class="row mb-3">
-                                                <!-- <div class="col-md-6"> -->
+                                            
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputFirstName" type="text" placeholder="Enter cloth name" name="cloth_name" required style="margin:0.5em 0;padding:1em"/>
                                                         <label for="inputFirstName"  style="margin:0 0.7em 0 1.5em ">name</label>
                                                     </div>
-                                                <!-- </div> -->
-                                                <!-- <div class="col-md-6"> -->
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <!-- <input class="form-control" id="inputPasswordConfirm" type="text" placeholder="image" name="cloth_img" required/> -->
                                                         <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" required/>
-
-
-                                                        <label for="inputPasswordConfirm" style="margin-left:1em">image</label>
+                                                        <label for="inputPasswordConfirm" style="margin:0 0 1em 1em;padding-top: 0.5em;"  >image</label>
                                                     </div>
-                                                <!-- </div> -->
+                                           
                                             </div>
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputEmail" type="text" placeholder="Enter description" name="cloth_description" required />
                                                 <label for="inputEmail">description</label>
                                             </div>
-                                            <!-- <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="text" name="user_id" value='1' disabled/>
-                                                <label for="inputEmail">user name</label>
-                                            </div> -->
                                             <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputEmail" type="text" name="size"  placeholder="Enter size such as :S,L,M,XL or ,36,38,40" required/>
                                                 <label for="inputEmail"> Size Such As :S,L,M,XL Or ,36,38,40</label>
                                             </div>
                                             <div class="row mb-3">
-                                           
-                                                <!-- <div class="col-md-6"> -->
                                                     <div class="form-floating mb-3 mb-md-0">
                                                        
                                                          <select class="form-select" aria-label="Default select example" name="categorie_id" required>
@@ -68,18 +57,12 @@
                                                         @endforeach
                                                           </select>
                                                     </div>
-                                                <!-- </div> -->
-                                             
-                                              
                                             </div>
                                             <div class="mt-4 mb-0">
                                                 <div class="d-grid"><button type="submit">Create cloth</button></div>
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>

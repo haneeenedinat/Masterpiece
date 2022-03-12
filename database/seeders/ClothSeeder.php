@@ -19,7 +19,7 @@ class ClothSeeder extends Seeder
       [
 
         'cloth_name'=>'trouser',
-        'cloth_img'=>'clothes.jpeg',
+        'cloth_img'=>'trouser.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'3',
         'size'=>'L',
@@ -27,18 +27,18 @@ class ClothSeeder extends Seeder
         'user_id'=>'1',
       ],
       [
-        'cloth_name'=>'trouser',
-        'cloth_img'=>'clothes2.jpg',
-        'cloth_description'=>'trouser trouser trouser',
+        'cloth_name'=>'shirt',
+        'cloth_img'=>'shirt.jpg',
+        'cloth_description'=>'shirt shirt shirt',
         'categorie_id'=>'3',
         'size'=>'M',
         'available'=>'yes',
         'user_id'=>'1',
       ],
       [
-        'cloth_name'=>'trouser',
-        'cloth_img'=>'clothes4.jpg',
-        'cloth_description'=>'trouser trouser trouser',
+        'cloth_name'=>'blouse.jpg',
+        'cloth_img'=>'blouse.jpg',
+        'cloth_description'=>'blouse blouse blouse',
         'categorie_id'=>'1',
         'size'=>'XL',
         'available'=>'yes',
@@ -46,7 +46,7 @@ class ClothSeeder extends Seeder
       ],
       [
         'cloth_name'=>'trouser',
-        'cloth_img'=>'ContactUs2.png',
+        'cloth_img'=>'trouser2.jpg',
         'cloth_description'=>'trouser trouser trouser',
         'categorie_id'=>'2',
         'size'=>'S',

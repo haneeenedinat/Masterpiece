@@ -32,18 +32,11 @@ Route::get('/contact-us', function () {
     return view('ui.contactus');
 });
 
-// Route::get('/Donate',function (){
-// return view('ui.Donate');
-// });
-
-
-
 Auth::routes();
 
 
 Route::resource('/cloth',ClothController::class);
-// Route::resource('/category',CategoryController::class);
-// Route::resource('/user',UserController::class);
+
 
 
 Route::group(['middleware'=>['auth','admin']],function(){

@@ -29,17 +29,12 @@
                                         <div class="form-floating mb-3">
                                                 <input class="form-control" id="inputEmail" type="text" placeholder="Enter Category name" name="categorie_name" value="{{$category->categorie_name}}"  required />
                                                 <label for="inputEmail">categorie name</label>
-                                            </div>
-
-                                           
+                                            </div>                               
                                             <div class="mt-4 mb-0">
                                                 <div class="d-grid"><button type="submit">Edit Category</button></div>
                                             </div>
                                         </form>
                                     </div>
-                                    <!-- <div class="card-footer text-center py-3">
-                                        <div class="small"><a href="login.html">Have an account? Go to login</a></div>
-                                    </div> -->
                                 </div>
                             </div>
                         </div>
