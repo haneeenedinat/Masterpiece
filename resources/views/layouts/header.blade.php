@@ -61,7 +61,10 @@
                             @endif
                         @else
                         <li class="nav-item">
+                        @if(Auth::user()->role=="user")
                         <a  href="{{route('profile.showprofile')}}">profile</a>
+                        @endif
+
                          </li>
                             <li class="nav-item">
                                 @if(Auth::user()->role=="admin")
