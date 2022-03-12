@@ -7,9 +7,9 @@ nav {
    
 }
 .navbar{
-    position: sticky !important;
-    top: 0 !important;
-    background-color: white !important;
+    /* position: sticky !important; */
+    /* top: 0 !important; */
+    /* background-color: white !important; */
 } 
 
 nav a.navbar-brand {

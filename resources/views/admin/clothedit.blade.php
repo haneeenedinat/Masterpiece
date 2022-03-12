@@ -36,7 +36,7 @@
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
                                                         <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" value="../assets/img/{{$cloth->cloth_img}}" required/>
-                                                        <label for="inputPasswordConfirm">image</label>
+                                                        <label for="inputPasswordConfirm"  style="padding-top: 0.5em;">image</label>
                                                     </div>
                                                 </div>
                                               
@@ -49,11 +49,6 @@
                                             <input class="form-control" id="inputEmail" type="text" name="size" value="{{$cloth->size}}" placeholder="Enter size such as :S,L,M,XL or ,36,38,40" required/>
                                                 <label for="inputEmail"> Size Such As :S,L,M,XL Or ,36,38,40</label>
                                             </div>
-
-                                            <div class="col-md-6">
-                                                    <div class="form-floating mb-3 mb-md-0">
-                                                       
-                                                </div>
 
                                                 <div class="row mb-3">
                                                 <div class="col-md-6">
@@ -77,7 +72,7 @@
                                                     </div>
                                                 </div>
                                               
-                                            </div>
+                                            <!-- </div> -->
                                                 
                                             </div>
                                             <div class="mt-4 mb-0">

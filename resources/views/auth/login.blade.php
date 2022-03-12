@@ -71,7 +71,7 @@
             <a class="nav-a" href="{{route('showClothes.uishowclothes')}}">Clothes</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="/contact-us">ContactUs</a>
+            <a class="nav-a" href="{{route('contact.index')}}">ContactUs</a>
             </li>
 
 
@@ -173,11 +173,11 @@
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                <!-- @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
-                                @endif
+                                @endif -->
                             </div>
                         </div>
                     </form>

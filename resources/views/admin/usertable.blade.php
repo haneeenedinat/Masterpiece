@@ -34,7 +34,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <!-- <th>phone</th> -->
+                                            <th>phone</th>
                                             <th>Password</th>
                                             <th>Is_admin </th>
                                             <th>Edit </th>
@@ -46,6 +46,7 @@
                                         <tr>
                                             <th>Name</th>
                                             <th>Email</th>
+                                            <th>phone</th>
                                             <th>Password</th>
                                             <th>Is_admin </th>
                                             <th>Edit </th>
@@ -57,6 +58,8 @@
                                         <tr>
                                             <td>{{$user->name}}</td>   
                                             <td>{{$user->email}}</td>
+                                            <td>{{$user->phone}}</td>
+
                    
                                             <td>{{$user->password}}</td>
                                             <td>{{$user->role}}</td>

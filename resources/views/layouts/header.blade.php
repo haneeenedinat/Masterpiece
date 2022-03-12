@@ -41,7 +41,7 @@
             <a class="nav-a" href="{{route('showClothes.uishowclothes')}}">Clothes</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="/contact-us">ContactUs</a>
+            <a class="nav-a" href="{{route('contact.index')}}">ContactUs</a>
             </li>
 
 

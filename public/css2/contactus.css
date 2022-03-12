@@ -16,7 +16,7 @@
     flex-direction: column;
 }
 
-.ContactUsImgForm form input, .ContactUsImgForm form textarea {
+ .ContactUsImgForm form textarea {
     border: 1px solid rgba(0, 0, 0, 0.11);
     margin-bottom: 5px;
     width: 35vw;
@@ -45,7 +45,7 @@
        margin-bottom: 2em;
     }
 
-    .ContactUsImgForm form input, .ContactUsImgForm form textarea {
+   .ContactUsImgForm form textarea {
         width: 80vw;
 
     }

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ClothController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 
@@ -28,14 +29,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('/contact-us', function () {
-    return view('ui.contactus');
-});
+// Route::get('/contact-us', function () {
+//     return view('ui.contactus');
+// });
 
 Auth::routes();
 
 
 Route::resource('/cloth',ClothController::class);
+Route::resource('/contact',ContactController::class);
+
 
 
 

@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Admin;
-use App\Models\Cloth;
+use App\Models\Contact;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class ContactController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,22 +16,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $cloths= DB::table('cloths')->select([
-            'cloths.id',
-            'cloths.cloth_name',
-            'cloths.cloth_img',
-            'cloths.size',
-            'cloths.available',
-            'cloths.categorie_id',
-            'cloths.cloth_description',
-            'categories.categorie_name',
-            'users.id',
-            'users.name',
-        ])->Join('users','cloths.user_id', '=', 'users.id')
-        ->Join('categories','categories.id', '=','cloths.categorie_id')
-        ->get();
-       
-       return view('admin.tables',compact('cloths'));
+        //
+        return view('ui.contactus');
     }
 
     /**
@@ -53,16 +38,32 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+      
+        if(Auth::check()){
+        $Message  = $request->Message;
+        $user_id = Auth::user()->id;
+        $data = array(
+        'Message'=>$Message,
+        "user_id"=>$user_id,
+    );
+    DB::table('contacts')->insert($data);
+    return view('ui.contactus');
+}
+
+else{
+    return redirect('/login');
+}
+
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Admin $admin)
+    public function show(Contact $contact)
     {
         //
     }
@@ -70,23 +71,22 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admin $admin)
+    public function edit(Contact $contact)
     {
         //
-
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Admin  $admin
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Admin $admin)
+    public function update(Request $request, Contact $contact)
     {
         //
     }
@@ -94,10 +94,10 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Admin  $admin
+     * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Admin $admin)
+    public function destroy(Contact $contact)
     {
         //
     }

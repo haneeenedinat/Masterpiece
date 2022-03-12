@@ -44,6 +44,12 @@
                                             </div>
 
                                             <div class="mb-3">
+                                                <label for="exampleFormControlTextarea1" class="form-label">phone</label>
+                                                <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="phone" required value="{{$user->phone}}">
+                                            </div>
+
+                                            <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Role</label>
                                                 
                                                 <select class="form-select" aria-label="Default select example" name="role" required>   
                                                            <option selected> Role</option>

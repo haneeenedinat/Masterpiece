@@ -11,11 +11,13 @@
           <img src="../assets/img/ContactUs2.png" alt="ContactUs Img" />
         </div>
         <div class="ContactUsForm">
-          <form >
-            <input type="text" placeholder="Your Name"  required/>
+          <form method="post" action="{{route('contact.store')}}" >
+          @csrf
+            <!-- <input type="text" placeholder="Your Name"  required/>
             <input type="email" placeholder="you@example.com" required/>
-            <textarea  placeholder="Tell us" required></textarea>
-            <button >Send</button>
+            <input type="text" placeholder="0777777777" required/> -->
+            <textarea  placeholder="Tell us" name="Message" required></textarea>
+            <button type="submit">Send</button>
           </form>
         </div>
       </div>
