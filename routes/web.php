@@ -29,18 +29,15 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/contact-us', function () {
-//     return view('ui.contactus');
-// });
+Route::get('/contact', function () {
+    return view('ui.contactus');
+});
 
 Auth::routes();
 
 
 Route::resource('/cloth',ClothController::class);
-Route::resource('/contact',ContactController::class);
-
-
-
+Route::resource('/contact-us',ContactController::class);
 
 Route::group(['middleware'=>['auth','admin']],function(){
     Route::resource('/admin',AdminController::class);

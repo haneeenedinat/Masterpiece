@@ -16,8 +16,15 @@ class ContactController extends Controller
      */
     public function index()
     {
-        //
-        return view('ui.contactus');
+        $Contacts= DB::table('contacts')->select([
+                    'contacts.Message',
+                    'users.id',
+                    'users.name',
+                    'users.phone',
+                ])->Join('users','contacts.user_id', '=', 'users.id')
+                ->get();
+        return view('admin.contactTable',compact('Contacts'));
+       
     }
 
     /**
@@ -100,5 +107,14 @@ else{
     public function destroy(Contact $contact)
     {
         //
+        $contact->deleteOrFail();
+        $Contacts= DB::table('contacts')->select([
+            'contacts.Message',
+            'users.id',
+            'users.name',
+            'users.phone',
+        ])->Join('users','contacts.user_id', '=', 'users.id')
+        ->get();
+return view('admin.contactTable',compact('Contacts'));
     }
 }

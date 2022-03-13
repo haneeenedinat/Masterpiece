@@ -71,7 +71,7 @@
             <a class="nav-a" href="{{route('showClothes.uishowclothes')}}">Clothes</a>
             </li>
             <li class="nav-item">
-            <a class="nav-a" href="{{route('contact.index')}}">ContactUs</a>
+            <a class="nav-a" href="/contact">ContactUs</a>
             </li>
 
 
@@ -197,7 +197,7 @@
   <li><h3>Page links</h3></li>
   <li><a href='/'>Home</a></li>
   <li><a href="{{route('Donate.uishowDonate')}}">Donors</a></li>
-  <li><a href='/contact-us'>ContactUs</a></li>
+  <li><a href="/contact">ContactUs</a></li>
   <li ><a href="{{route('showClothes.uishowclothes')}}">Clothes</a></li>
 
 

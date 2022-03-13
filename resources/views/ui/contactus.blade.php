@@ -11,7 +11,7 @@
           <img src="../assets/img/ContactUs2.png" alt="ContactUs Img" />
         </div>
         <div class="ContactUsForm">
-          <form method="post" action="{{route('contact.store')}}" >
+          <form method="post" action="{{route('contact-us.store')}}" >
           @csrf
             <!-- <input type="text" placeholder="Your Name"  required/>
             <input type="email" placeholder="you@example.com" required/>
