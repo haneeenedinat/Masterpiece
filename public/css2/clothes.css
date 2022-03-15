@@ -98,41 +98,7 @@
     color: white;
     font-weight: 600;
   }
-  
-  /* .btn-icon {
-    width: 1.5em;
-  }
-  
-  .btn-icon::after {
-    content: " ";
-    border-right: 1px solid #888585;
-    position: relative;
-    right: -0.3125em;
-  } */
-  
-  
-  
-  /* .add-to-cart-btn:hover {
-    cursor: pointer;
-    box-shadow: 1px 0px 0px 0px #aca9a9;
-    background-color: #efb436d0;
-  } */
-  
-  /* .add-to-cart-btn {
-    display: flex;
-    gap: 0.4375em;
-    margin-top: 0.5em;
-    background-color: #f78f1e;
-    padding: 0.3125em;
-    border-radius: 4px;
-    box-shadow: 0px 0px 2px 1px #aca9a9;
-    border: 1px solid #7f8a93;
-    align-content: space-around;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.5s ease;
-  }
-   */
+
   .image-containerCard img:hover {
     transform: scale(1.1);
   }

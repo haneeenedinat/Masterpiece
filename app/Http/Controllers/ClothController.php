@@ -330,23 +330,18 @@ class ClothController extends Controller
         $profile=[];
          $user_login_name = Auth::user()->name; 
          $user_login_id= Auth::user()->id;
-        //  $availableNo=DB::table('cloths')->where('available','No')->get();
-        //  $availableyes=DB::table('cloths')->where('available','yes')->get();
+    
        $availableNo=DB::table('cloths')->where('available','No')->where('beneficiary_name',$user_login_name)->get();
      $availableyes=DB::table('cloths')->where('available','yes')->where('user_id',$user_login_id)->get();
-    //   dd($availableyes);
-    // dd($availableNo);
+   
 
         if(count($availableNo) > 0){
         $profile=$availableNo;
-        // dd($profile);
-        // return view('ui.profile',compact('profile'));
+    
          }
          if(count($availableyes) > 0){
         $profile=$availableyes;
-        // dd($profile);
-
-        // return view('ui.profile',compact('profile'));
+    
          }
     
         return view('ui.profile',compact('profile'));

@@ -10,12 +10,14 @@
         <div>
           <img src="../assets/img/ContactUs2.png" alt="ContactUs Img" />
         </div>
+    
         <div class="ContactUsForm">
           <form method="post" action="{{route('contact-us.store')}}" >
           @csrf
-            <!-- <input type="text" placeholder="Your Name"  required/>
-            <input type="email" placeholder="you@example.com" required/>
-            <input type="text" placeholder="0777777777" required/> -->
+          @if(!empty(Session::get('message')))
+         <div class="message"> {{ Session::get('message') }}</div>
+          @endif
+
             <textarea  placeholder="Tell us" name="Message" required></textarea>
             <button type="submit">Send</button>
           </form>

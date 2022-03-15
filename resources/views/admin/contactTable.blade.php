@@ -54,12 +54,11 @@
                                             <td width="200vw">{{$Contact->Message}}</td>
                                             <td>
                                             <form method="POST" action="{{route('contact-us.destroy',$Contact->id)}}">
-                                             @csrf
+                                            @csrf
                                              @method('delete')
                                           <button type="submit" class="delete" style="background-color:red !important;color:white;border:none;padding:0.5rem;border-radius:3px">delete</button>
                                        </form>
                                     </td>
-
                                         </tr>
                                         @endforeach
                                     </tbody>

@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
+
+
+
 class ContactController extends Controller
 {
     /**
@@ -18,7 +21,8 @@ class ContactController extends Controller
     {
         $Contacts= DB::table('contacts')->select([
                     'contacts.Message',
-                    'users.id',
+                    'contacts.id',
+                    'contacts.user_id',
                     'users.name',
                     'users.phone',
                 ])->Join('users','contacts.user_id', '=', 'users.id')
@@ -55,7 +59,8 @@ class ContactController extends Controller
         "user_id"=>$user_id,
     );
     DB::table('contacts')->insert($data);
-    return view('ui.contactus');
+    return redirect()->back()->with('message','We will contact you as soon as possible');
+   
 }
 
 else{
@@ -106,15 +111,15 @@ else{
      */
     public function destroy(Contact $contact)
     {
-        //
-        $contact->deleteOrFail();
+    //  dd($contact);
+     $contact->deleteOrFail();
         $Contacts= DB::table('contacts')->select([
             'contacts.Message',
-            'users.id',
+            'contacts.id',
             'users.name',
             'users.phone',
         ])->Join('users','contacts.user_id', '=', 'users.id')
         ->get();
-return view('admin.contactTable',compact('Contacts'));
+       return view('admin.contactTable',compact('Contacts'));
     }
 }
