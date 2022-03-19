@@ -28,10 +28,22 @@
  color: #0f5132;
  background-color: #d1e7dd;
 border:1px solid #badbcc;
+border-radius: 5px;
 height: 10vh ;
 margin: 2em 0 ;
 padding: 0.5em;
 width: 35vw;
+}
+
+.errorMessage{
+    color: rgba(141,50,59,255);
+    background-color: rgba(248,215,218,255);
+   border: 1px solid rgba(245,196,201,255);
+   border-radius: 5px;
+   height: 10vh ;
+   margin: 2em 0 ;
+   padding: 0.5em;
+   width: 35vw;
 }
 
 
@@ -56,7 +68,7 @@ width: 35vw;
        margin-bottom: 2em;
     }
 
-   .ContactUsImgForm form textarea,.message {
+   .ContactUsImgForm form textarea,.message ,.errorMessage{
         width: 90vw;
 
     }

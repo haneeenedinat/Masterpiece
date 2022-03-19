@@ -88,16 +88,16 @@ class UserController extends Controller
     public function update(Request $request,User $user)
     {
         //
-        $email = DB::table('users')->where('email' ,"=", $request->email)->first();
+        // $email = DB::table('users')->where('email' ,"=", $request->email)->first();
       
-        if(!empty($email)){
-            return redirect()->back()->with('message','This Email is Already Exist');
-        }
-        else{
+        // if(!empty($email)){
+        //     return redirect()->back()->with('message','This Email is Already Exist');
+        // }
+        // else{
         $user->update($request->all());
         $users=User::all();
         return view("admin.usertable",compact('users'));
-        }
+        // }
 
     }
 

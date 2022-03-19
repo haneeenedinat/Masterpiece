@@ -1,7 +1,6 @@
 .Footer{
     display: flex;
     flex-direction: column;
-    /* margin-top: 4em; */
     font-weight: 600;
     border-top: 2px solid black;
     background-color: black;

@@ -5,10 +5,44 @@
   }
   
   .Profile{
-  
       display: flex;
       flex-direction: column;
       margin: 2em;
+  }
+
+
+ .profileForm input{
+    margin: 1em ;
+    padding: 0.9em; 
+    width: 25vw;
+  }
+
+  .profileForm button {
+    border: none;
+    border-radius: 5px;
+    background: black;
+    color:white;
+    padding: 0.5em;
+  }
+
+.group3{
+  margin: 1em;
+}
+
+  .group1,.group2,.group3,.group4,.group5{
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .errorname{
+    color: rgba(141,50,59,255);
+    background-color: rgba(248,215,218,255);
+   border: 1px solid rgba(245,196,201,255);
+   border-radius: 5px;
+   margin: 1em 0.2em;
+   padding: 0.5em;
+   width: 28vw;
   }
 
   th img{
@@ -35,7 +69,7 @@
       
   }
   
-  .ProfileInformationUserName ,.ProfileInformationEmail{
+  .ProfileInformationUserName {
       margin: 0.6em 0;
     
   }
@@ -74,6 +108,17 @@
       .SelectedServicesInformationProfile table th {
         font-size: 0.8em;
       }
+
+     .profileForm input{
+        width: 38vw;
+        margin: 0.2em;
+        padding: 0.2em;
+      }
+
+      .errorname{
+        width: 60vw;
+    
+    }
       
   }
 
@@ -85,5 +130,26 @@
     .ProfileImgInformation {
       width: 99%;
     }
+
+    .group1,.group2,.group3,.group4,.group5{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+   .profileForm input{
+      margin: 1em ;
+      padding: 0.9em; 
+      width: 60vw;
+    
+    }
+
+    .errorname{
+      width: 60vw;
+      margin-bottom: 1em;
+
+  }
+
+  
   }
   

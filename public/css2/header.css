@@ -6,11 +6,7 @@ nav {
     box-shadow: 1px 1px 10px #333333;
    
 }
-.navbar{
-    /* position: sticky !important; */
-    /* top: 0 !important; */
-    /* background-color: white !important; */
-} 
+
 
 nav a.navbar-brand {
     color: black !important;

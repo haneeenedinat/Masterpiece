@@ -11,11 +11,41 @@
             <div>
           <div class="ProfileInformationUserName">
               <h3>personal information</h3>
-            <h3>UserName : {{Auth::user()->name}}</h3>
-          </div>
+              </div>
+     <div class="formcontainer">
+       <form method="POST" action="{{route('profile.profileupdate',Auth::user()->id)}}" class="profileForm">
+       @csrf
+       @method('PUT')
+       <div class="group1">
+      <input type="text" value="{{Auth::user()->name}}" name="name"/>
+      <input type="text" value="{{Auth::user()->email}}" name="email" disabled/>
+      </div>
 
-          <div class="ProfileInformationEmail">
-            <h3>Email :{{Auth::user()->email}}</h3>
+      <div class="group4">
+      @error('name')
+        <div class="errorname">{{ $message }}</div>
+        @enderror 
+      </div>
+
+      <div class="group2">
+      <input type="text" value="{{Auth::user()->phone}}" name="phone"/>
+      <input type="password" value="{{Auth::user()->password}}" name="password"  />
+      </div>
+
+      <div class="group5">
+      @error('phone')
+        <div class="errorname">{{ $message }}</div>
+        @enderror 
+        @error('password')
+        <div class="errorname">{{ $message }}</div>
+        @enderror 
+  
+      </div>
+
+      <div class="group3">
+      <button type="submit" class="submit">update information</button>
+      </div>
+      </form>
           </div>
 
           </div>
@@ -47,5 +77,6 @@
       </div>
     </div>
     @endsection
+   
  </body>
 </html>

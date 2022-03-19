@@ -22,7 +22,6 @@ class ContactController extends Controller
         $Contacts= DB::table('contacts')->select([
                     'contacts.Message',
                     'contacts.id',
-                    'contacts.user_id',
                     'users.name',
                     'users.phone',
                 ])->Join('users','contacts.user_id', '=', 'users.id')
@@ -49,9 +48,10 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-
-      
         if(Auth::check()){
+            $request->validate([
+                'Message' => 'required',
+            ]);
         $Message  = $request->Message;
         $user_id = Auth::user()->id;
         $data = array(
@@ -109,17 +109,10 @@ else{
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Contact $contact)
+    public function destroy($id)
     {
-    //  dd($contact);
+    $contact=Contact::find($id);
      $contact->deleteOrFail();
-        $Contacts= DB::table('contacts')->select([
-            'contacts.Message',
-            'contacts.id',
-            'users.name',
-            'users.phone',
-        ])->Join('users','contacts.user_id', '=', 'users.id')
-        ->get();
-       return view('admin.contactTable',compact('Contacts'));
+       return redirect('contact-us');
     }
 }

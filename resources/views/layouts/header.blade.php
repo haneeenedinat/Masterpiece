@@ -68,7 +68,7 @@
                          </li>
                             <li class="nav-item">
                                 @if(Auth::user()->role=="admin")
-                                <a  href="/admin"
+                                <a  href="{{route('cloth.index')}}"
                                      >
                                         {{ __('dashboard') }}
                                     </a>

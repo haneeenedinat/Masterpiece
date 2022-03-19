@@ -36,7 +36,7 @@ class ClothSeeder extends Seeder
         'user_id'=>'1',
       ],
       [
-        'cloth_name'=>'blouse.jpg',
+        'cloth_name'=>'blouse',
         'cloth_img'=>'blouse.jpg',
         'cloth_description'=>'blouse blouse blouse',
         'categorie_id'=>'1',

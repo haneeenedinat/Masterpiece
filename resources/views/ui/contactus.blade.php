@@ -14,11 +14,16 @@
         <div class="ContactUsForm">
           <form method="post" action="{{route('contact-us.store')}}" >
           @csrf
+          @error('Message')
+          <div class="errorMessage">{{ $message }}</div>
+          @enderror 
+          
           @if(!empty(Session::get('message')))
          <div class="message"> {{ Session::get('message') }}</div>
           @endif
 
-            <textarea  placeholder="Tell us" name="Message" required></textarea>
+            <textarea  placeholder="Tell us" name="Message" ></textarea>
+      
             <button type="submit">Send</button>
           </form>
         </div>

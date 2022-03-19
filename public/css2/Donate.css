@@ -1,109 +1,24 @@
-/* .DonorsContainer {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: 1em auto;
-    padding: 1em;
-    border: 1px white solid;
-    border-radius: 1em;
-}
 
-.RegisterContainer h3{
-    margin: 1em auto;
-}
-
-.RegisterContainer p{
-    color:red ;
-    margin: 0 auto ;
-    font-weight: 600;
-}
-
-.RegisterContainer form a{
-    text-decoration: none;
-    color:black;
-
-}
-
-.RegisterContainer form{
-    display: flex;
-    flex-direction: column;  
-}
-
-.RegisterContainer form input,.RegisterContainer select{
-   line-height: 2;
-   margin: 1.2em auto;
-   padding: 0.5em;
-   border:none;
-   border-radius: 1em;
-   width: 70%;
-}
-
-.RegisterContainer label{
-    margin:0em 8em;
-}
-
-.DonorsContainer form .btn-primary{
-    padding: 1em ;
-    margin: 1em auto ;
-    font-size: 1em;
-    border: 1px black solid;
-    border-radius: 1em;
-    color:white;
-    background:black ;
-}
-
-.DonorsContainer p{
-    color:red ;
-    margin: 1em auto ;
-    font-weight: 600;
-}
-
-.DonorsContainer form label{
-    margin: 0.7em 0em;
-}
-
-.DonorsContainer form a{
-    margin: 0 auto;
-    font-weight: 600;
-}
-
-
-
-@media (max-width:768px) {
-    .DonorsContainer {
-        width: 70%;
-    }  
-}
-
-@media (max-width:600px) {
-    .DonorsContainer {
-        width: 88%;
-    }  
-}
-
-@media (max-width:426px) {
-
-      
-    .DonorsContainer form input{
-        width: 99%;
-         
-     }
-}
-
-
-
- */
- 
 .Donate .Donateh2{
     text-align: center;
     margin: 2em 0;
 }
 
-.DonateImgForm {
+.DonateImgForm  {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* margin-bottom: 1em; */
+}
+
+.error{
+    color: rgba(141,50,59,255);
+    background-color: rgba(248,215,218,255);
+   border: 1px solid rgba(245,196,201,255);
+   border-radius: 5px;
+   height: 10vh ;
+   margin-bottom: 5px;
+   padding: 0.5em;
+   width: 50vw;
 }
 
 
@@ -113,7 +28,7 @@
     flex-direction: column;
 }
 
-.DonateImgForm form input, .DonateImgForm form textarea  {
+.DonateImgForm form input {
     border: 1px solid rgba(0, 0, 0, 0.11);
     margin-bottom: 5px;
     width: 50vw;
@@ -124,7 +39,6 @@
  .DonateImgForm form select {
     border: 1px solid rgba(0, 0, 0, 0.11);
     margin-bottom: 5px;
-    /* width: 35vw; */
     border-radius: 5px;
     padding: 1em;
  }
@@ -137,9 +51,6 @@
     color:white;
 }
 
-.DonateImgForm img{
-    /* width: 40vw; */
-}
 
 @media (max-width:998px) {
     .DonateImgForm img{
@@ -151,7 +62,6 @@
     .DonateImgForm {
         display: flex;
        flex-direction: column;
-       margin-bottom: 2em;
     }
 
     .DonateImgForm img{
@@ -160,6 +70,8 @@
 
     .DonateImgForm form input {
         width: 90vw;
-
+    }
+    .error{
+        width: 90vw;
     }
 }

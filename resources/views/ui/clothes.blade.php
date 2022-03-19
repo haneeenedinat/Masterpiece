@@ -4,6 +4,21 @@
 
 <div class="ProductContainer">
 <h2 class="titleProducts"> Clothes</h2>
+
+<div class="search">
+<form method="GET" action="{{route('search.searchClothes')}}" class="searchForm" >
+ <label>cloth name: </label>
+<input type="text" name="cloth_name" value="" placeholder="trouser,shirt..."  id="search" required />
+<label>size: </label>
+<input type="text" name="size" value="" placeholder="S,L or 38,40" id="search" required/>
+<button type="submit" >Search</button>
+</form>
+@if(!empty(Session::get('search')))
+<div class="message"> {{ Session::get('search') }}</div>
+@endif
+
+</div>
+
 <div class="main-containerProduct">
     @foreach($cloths as $cloth)
     @if( $cloth->available == 'yes')

@@ -35,7 +35,7 @@
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-floating mb-3 mb-md-0">
-                                                        <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" value="../assets/img/{{$cloth->cloth_img}}" required/>
+                                                        <input class="form-control" id="inputPasswordConfirm" type="file" placeholder="image" name="cloth_img" />
                                                         <label for="inputPasswordConfirm"  style="padding-top: 0.5em;">image</label>
                                                     </div>
                                                 </div>
@@ -72,7 +72,7 @@
                                                     </div>
                                                 </div>
                                               
-                                            <!-- </div> -->
+                                          
                                                 
                                             </div>
                                             <div class="mt-4 mb-0">
