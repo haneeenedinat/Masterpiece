@@ -1,6 +1,3 @@
-
-
-
 @extends('layouts.footer')
 @extends('layouts.header')
 @section('content')
@@ -60,9 +57,7 @@
       </div>
     </div>
 
-   
-   
-    <script src='js2/Donate.js'></script>
+<script src='js2/Donate.js'></script>
 @endsection
  </body>
 
