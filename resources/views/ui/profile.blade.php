@@ -52,6 +52,10 @@
 
           <div class="SelectedServicesInformationProfile">
               <h2>Clothes information</h2>
+
+        @if(!empty($profile))
+         <div class="messageprofile">The representative will contact you on the day the items are received</div>
+          @endif
               <table>
           <thead>
           <tr>
