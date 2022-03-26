@@ -38,9 +38,9 @@
     margin: 0.4em;
   }
   
-  .Footer .FooterSocialMedia ul li a{
-    color:white;
-  }
+  /* .Footer .FooterSocialMedia ul li a{ */
+    /* color:white; */
+  /* } */
   
   .Footer ul{
     list-style-type: none;

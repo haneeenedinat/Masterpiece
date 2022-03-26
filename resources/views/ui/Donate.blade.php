@@ -44,7 +44,7 @@
         <div class="error">{{ $message }}</div>
         @enderror 
        
-        <select   name="categorie_id" id ="categorie_id"  required>  
+        <select   name="categorie_id" id="categorie_id"  required>  
               <option selected value="None">select category name</option>
              @foreach($Categories as $Category)                                     
             <option value="{{$Category->id}}">{{$Category->categorie_name}}</option>
@@ -60,5 +60,4 @@
 <script src='js2/Donate.js'></script>
 @endsection
  </body>
-
 </html>

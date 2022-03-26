@@ -39,8 +39,6 @@
 
         <div class="FeaturedVolunteers">
         <div><img src="assets/img/beneficiary.png" alt='beneficiary img'/></div>
-
-        
           The number of beneficiaries 150 families from all governorates of the
           Kingdom
         </div>

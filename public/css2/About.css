@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
      align-items: center;
-    /* background: url(../assets/img/bout122.png); */
     background: linear-gradient(190deg, #ffffff , rgba(0, 0,0, 0)), url(../assets/img/bout122.png);
     background-position:center;
     background-size: cover;

@@ -59,7 +59,7 @@
               <table>
           <thead>
           <tr>
-            <th>cloth_img</th>
+            <th class='cloth_img'>cloth_img</th>
             <th>cloth_name</th>
             <th>size</th>
             <th>Access time</th>
@@ -67,7 +67,7 @@
   
           @foreach($profile as $profileUser)
           <tr>
-            <th><img src="../assets/img/{{$profileUser->cloth_img}}" alt="{{$profileUser->cloth_img}}"/></th>
+            <th class='cloth_img'><img src="../assets/img/{{$profileUser->cloth_img}}" alt="{{$profileUser->cloth_img}}"/></th>
             <th>{{$profileUser->cloth_name}}</th>
             <th>{{$profileUser->size}}</th>
             <th>{{$profileUser->Access_time}}</th>

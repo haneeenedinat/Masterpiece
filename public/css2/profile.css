@@ -128,7 +128,7 @@
   }
 
 
-  @media (max-width:426px) {
+  @media (max-width:448px) {
     .SelectedServicesInformationProfile table th {
       font-size: 0.7em;
     }
@@ -154,6 +154,10 @@
       width: 60vw;
       margin-bottom: 1em;
 
+  }
+
+  img,.cloth_img{
+    display: none;
   }
 
   

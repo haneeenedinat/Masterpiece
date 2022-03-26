@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="About-us">
-    <p>
+<p>
  About Us <br>
  Each donation...New joy!
  A project specialized in collecting and recycling surplus clothes and distributing them to the needy.
@@ -30,8 +30,8 @@
 <p> We believe in our responsibility towards society</p> 
 </div>
 </div>
-<div class="Rate2">
 
+<div class="Rate2">
 <div>
 <img src="../assets/img/equality.png" alt="equality"/>
 <p>We respect each other and believe in equality for all</p> 
