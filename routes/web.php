@@ -28,6 +28,10 @@ Route::get('/', function () {
     return view('ui.index');
 });
 
+Route::get('/about-us', function () {
+    return view('ui.aboutus');
+});
+
 
 Route::get('/contact', function () {
     return view('ui.contactus');

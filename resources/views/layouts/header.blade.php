@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{asset('css2\Donate.css')}}" >
     <link rel="stylesheet" href="{{asset('css2\clothes.css')}}" >
     <link rel="stylesheet" href="{{asset('css2\profile.css')}}" >
+    <link rel="stylesheet" href="{{asset('css2\About.css')}}" >
+
 
     <meta
       name="description"
@@ -46,7 +48,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid">
-          <h1> <a href="/" class="navbar-brand">Donate</a></h1> 
+          <h1> <a href="/" class="navbar-brand">clothes house</a></h1> 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon" />
       </button>
@@ -56,6 +58,10 @@
             <li class="nav-item">
             <a class="nav-a active" aria-current="page" href="/" >Home</a>
             </li>
+            <li class="nav-item">
+            <a class="nav-a active" aria-current="page" href="/about-us" >About Us</a>
+            </li>
+          
             <li class="nav-item">
             <a class="nav-a" href="{{route('Donate.uishowDonate')}}">Donate</a>
             </li>

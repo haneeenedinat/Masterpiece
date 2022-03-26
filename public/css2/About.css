@@ -1,0 +1,112 @@
+.About-us{
+    display: flex;
+    justify-content: center;
+     align-items: center;
+    /* background: url(../assets/img/bout122.png); */
+    background: linear-gradient(190deg, #ffffff , rgba(0, 0,0, 0)), url(../assets/img/bout122.png);
+    background-position:center;
+    background-size: cover;
+    min-height:100vh;
+    margin-bottom: 2em;
+}
+.About-us p{
+    width: 50vw;
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: black;
+    padding: 1em;
+    color:white;
+    opacity: 0.6;
+    border-radius: 15px;
+}
+
+.Rate1, .Rate2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Rate1 div,.Rate2 div{
+    padding: 1em;
+    margin:0 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Rate div img{
+    width: 10vw;
+    margin-bottom: 1em;
+}
+
+.RateTitle{
+    margin: 1em 0; 
+    text-align: center;
+}
+
+.Location {
+  margin-top:4em;
+}
+.Location h1{
+    text-align: center;
+}
+
+.map {
+	margin-top:3em ;
+}
+.map iframe {
+	width: 100%;
+    height: 470px;
+}
+
+@media (max-width:950px) {
+    .About-us p{
+        width: 85vw;
+        margin: 1em 0;
+    }
+
+    .About-us{
+        min-height:50vh;
+}
+.Rate1 div,.Rate2 div{
+    padding: 1em;
+}
+
+.Rate1 p,.Rate2 p{
+    text-align: center;
+}
+
+}
+
+@media (max-width:628px) {
+   
+.Rate1,.Rate2{
+    display:flex;
+    flex-direction: column;
+}
+.Rate1 p,.Rate2 p{
+    text-align: center;
+}
+
+.Rate div img{
+    width: 15vw;
+ 
+}
+}
+
+
+@media (max-width:425px) {
+    .About-us p{
+        width: 95vw;
+      
+    }
+    .About-us{
+        min-height:10vh;
+}
+
+.Rate div img{
+    width: 20vw;
+ 
+}
+}
+
+
